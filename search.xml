@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>��Լ�ļ���ģ��</title>
+      <link href="/2019/07/09/1.%E7%AE%80%E7%BA%A6%E7%9A%84%E7%AE%80%E5%8E%86%E6%A8%A1%E6%9D%BF/"/>
+      <url>/2019/07/09/1.%E7%AE%80%E7%BA%A6%E7%9A%84%E7%AE%80%E5%8E%86%E6%A8%A1%E6%9D%BF/</url>
+      
+        <content type="html"><![CDATA[<p>���׼����ְ������һ����Լ�����۵ļ�����Ŀ��<a href="https://github.com/gwuhaolin/resume" target="_blank" rel="noopener">https://github.com/gwuhaolin/resume</a><br>�����������ӵģ����˾��ñȽ����ۣ�<br><img src="https://img-blog.csdnimg.cn/20190701222352169.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2pheXhpYW9oZQ==,size_16,color_FFFFFF,t_70" alt="���������ͼƬ����"></p><p>����ԭ���ߵ�ʹ��˵���������Ը��ӣ�����Ҳ�������˺ܾòŲ���á����ļ�¼�����޸ġ�������github page�ϵĹ��̣������ο���</p><h2 id="ʹ�u��̼�¼"><a href="#ʹ�u��̼�¼" class="headerlink" title="ʹ�ù��̼�¼"></a>ʹ�ù��̼�¼</h2><ul><li>fork����Ŀ����clone�������޸�</li><li>������ĿĿ¼ִ��npm i��װ����<br>����ʹ�õ���windows��������һ��������<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a> �����ذ�װnodejs��һ·���next����ͬʱ��npm���ص����ء�<br>  ��clone�����ص���ĿĿ¼������Git Bash��ִ��npm i����װ������</li><li>�޸� webpack-dist.config.js��<br> ��������ʹ��github page�������ע�͵� 99 �� �Զ������������ݡ�<br> �����Լ���ʵ��������޸� 106 �е�url�����磬���github id Ϊ abc������Ҫ�����޸�Ϊ <a href="https://abc.github.io/resume/" target="_blank" rel="noopener">https://abc.github.io/resume/</a></li><li>�޸� package.json<br>�� 4 ���޸�Ϊ��”pub”: “set NODE_ENV=dev &amp;&amp; webpack –config webpack-dist.config.js”������ַ���ȥ���˺���ɾ�� .public �����ݡ�Ը�����linux�е�������ǿ����ڱ�����ֶ�ɾ�� .publicĿ¼��</li><li>�����Լ���ʵ��������޸� src/index.html �ļ���</li><li>ִ��npm run dev�����Զ�����������ڱ���Ԥ����</li><li>�޸����ִ�� npm run pub��������ghpages</li><li>�� <a href="https://abc.github.io/resume/" target="_blank" rel="noopener">https://abc.github.io/resume/</a>�����ɿ����޸ĺ��Ч����</li></ul><h2 id="ע������"><a href="#ע������" class="headerlink" title="ע������"></a>ע������</h2><ul><li>������Ͻǵ� <strong>����PDF</strong> ����Ԥ��������PDF���˴���PDF��ʽ���ܲ��Ǻܺã����޸� index.html��ʹ��PDF��ʽ������</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> resume </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> resume </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>简历</title>
       <link href="/2019/07/09/resume/"/>
       <url>/2019/07/09/resume/</url>
