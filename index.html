@@ -1322,6 +1322,34 @@
 
 
 
+
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '18567ce7f8569a99c932',
+    clientSecret: '6288863c10c30604946b483cdd227429a02e5576',
+    repo: 'jayxiaohe.github.io',
+    owner: 'jayxiaohe',
+    admin: ['jayxiaohe'],
+    id: md5(location.pathname),
+    
+      language: window.navigator.language || window.navigator.userLanguage,
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
   
   <script>
     // Popup Window;

@@ -121,9 +121,12 @@
 <meta property="og:site_name" content="我的博客">
 <meta property="og:description" content="This is my book list at douban.com         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
+<meta property="og:image" content="http://yoursite.com/assets/douban-loading.gif">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BOOKS">
 <meta name="twitter:description" content="This is my book list at douban.com         .hexo-douban-tabs {     margin-bottom: 15px;     margin-top: 15px; }  .hexo-douban-tab {     padding: 5px; }  .hexo-douban-active {">
+<meta name="twitter:image" content="http://yoursite.com/assets/douban-loading.gif">
 
 
 
@@ -543,10 +546,10 @@
         (0)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab2" href="javascript:;" rel="external">
         想读
-        (0)</a>
+        (1)</a>
     <a class="hexo-douban-tab" id="hexo-douban-tab3" href="javascript:;" rel="external">
         已读
-        (0)</a>
+        (1)</a>
 </div>
 <div>
     <div id="hexo-douban-item1">
@@ -561,6 +564,25 @@
     </div>
     <div id="hexo-douban-item2">
         
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img3.doubanio.com/view/subject/m/public/s4524240.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/5345682/"> Maven实战</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  许晓斌 / 机械工业出版社 / 2010年12月 / 65.00元
+
+      
+        </div>
+        <div class="hexo-douban-meta">2019-06-07
+      想读 /  Maven 软件开发 系统构建&amp;自动化</div>
+        <div class="hexo-douban-comments">
+  </div>
+    </div>
+</div>
+
+        
         <div class="hexo-douban-pagination">
     <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
     <a class="hexo-douban-button hexo-douban-previouspage" href="javascript:;">上一页</a>
@@ -571,6 +593,24 @@
 
     </div>
     <div id="hexo-douban-item3">
+        
+        <div class="hexo-douban-item">
+    <div class="hexo-douban-picture"><img src="/assets/douban-loading.gif" data-src="https://img1.doubanio.com/view/subject/m/public/s1151479.jpg" referrerpolicy="no-referrer"></div>
+    <div class="hexo-douban-info">
+        <div class="hexo-douban-title"><a target="_blank" href="https://book.douban.com/subject/1209899/"> 我与地坛</a></div>
+        <div class="hexo-douban-meta">
+        
+  
+  史铁生 / 春风文艺出版社 / 2002-5 / 25.00元
+
+      </div>
+        <div class="hexo-douban-meta">2019-07-03
+      读过 /  人生 随笔 / ★★★★★ 力荐</div>
+        <div class="hexo-douban-comments">
+  </div>
+    </div>
+</div>
+
         
         <div class="hexo-douban-pagination">
     <a class="hexo-douban-button hexo-douban-firstpage" href="javascript:;"> 首页</a>
@@ -1054,6 +1094,34 @@ for (var i = 0; i < firstpages.length; i++) {
   
 
 
+
+
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '18567ce7f8569a99c932',
+    clientSecret: '6288863c10c30604946b483cdd227429a02e5576',
+    repo: 'jayxiaohe.github.io',
+    owner: 'jayxiaohe',
+    admin: ['jayxiaohe'],
+    id: md5(location.pathname),
+    
+      language: window.navigator.language || window.navigator.userLanguage,
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
 
   
   <script>
