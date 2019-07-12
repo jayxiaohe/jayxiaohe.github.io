@@ -122,7 +122,7 @@
 <meta property="og:site_name" content="一个博客">
 <meta property="og:description" content="记录SQL调优相关内容">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-12T09:27:51.782Z">
+<meta property="og:updated_time" content="2019-07-12T09:31:46.493Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL 调优相关">
 <meta name="twitter:description" content="记录SQL调优相关内容">
@@ -464,7 +464,7 @@
                 
               
 
-              <time title="创建时间：2019-07-12 16:31:10 / 修改时间：17:27:51" itemprop="dateCreated datePublished" datetime="2019-07-12T16:31:10+08:00">2019-07-12</time>
+              <time title="创建时间：2019-07-12 16:31:10 / 修改时间：17:31:46" itemprop="dateCreated datePublished" datetime="2019-07-12T16:31:10+08:00">2019-07-12</time>
             </span>
           
 
@@ -559,10 +559,11 @@
 <ul>
 <li>在经常需要进行检索的字段上创建索引，比如要按照表字段username进行检索，那么就应该在姓名字段上创建索引，如果经常要按照员工部门和员工岗位级别进行检索，那么就应该在员工部门和员工岗位级别这两个字段上创建索引。 <ul>
 <li>创建索引给检索带来的性能提升往往是巨大的，因此在发现检索速度过慢的时候应该首先想到的就是创建索引。 </li>
-<li>一个表的索引数最好不要超过6个，若太多则应考虑一些不常使用到的列上建的索引是否有 必要。索引并不是越多越好，索引固然可以提高相应的 select 的效率，但同时也 <strong>降低了 insert 及 update 的效率，因为 insert 或 update 时有可能会重建索引。</strong>所以怎样建索引需要慎重考虑，视具体情况而定。<h1 id="二-避免在索引上使用计算"><a href="#二-避免在索引上使用计算" class="headerlink" title="二.避免在索引上使用计算"></a>二.避免在索引上使用计算</h1>在where字句中，如果索引列是计算或者函数的一部分，DBMS的优化器将不会使用索引而使用全表查询,函数属于计算的一种,同时在 in 和 exists 中通常情况下使用 exists，因为 <strong>in不走索引效率低</strong>：<br>效率低：<br><code>select * from user where salary*22&gt;11000 (salary是索引列)</code></li>
+<li>一个表的索引数最好不要超过6个，若太多则应考虑一些不常使用到的列上建的索引是否有 必要。索引并不是越多越好，索引固然可以提高相应的 select 的效率，但同时也 <strong>降低了 insert 及 update 的效率，因为 insert 或 update 时有可能会重建索引。</strong>所以怎样建索引需要慎重考虑，视具体情况而定。</li>
 </ul>
 </li>
 </ul>
+<h1 id="二-避免在索引上使用计算"><a href="#二-避免在索引上使用计算" class="headerlink" title="二.避免在索引上使用计算"></a>二.避免在索引上使用计算</h1><p>在where字句中，如果索引列是计算或者函数的一部分，DBMS的优化器将不会使用索引而使用全表查询,函数属于计算的一种,同时在 in 和 exists 中通常情况下使用 exists，因为 <strong>in不走索引效率低</strong>：<br>效率低：<br><code>select * from user where salary*22&gt;11000 (salary是索引列)</code></p>
 <p>效率高：<br><code>select * from user where salary&gt;11000/22(salary是索引列)</code></p>
 <h1 id="三-使用预编译查询"><a href="#三-使用预编译查询" class="headerlink" title="三.使用预编译查询"></a>三.使用预编译查询</h1><p>程序中通常是根据用户的输入来动态执行SQL，这时应该尽量使用参数化SQL,这样不仅可以避免SQL注入漏洞<br>攻击，最重要数据库会对这些参数化SQL进行预编译，这样第一次执行的时候DBMS会为这个SQL语句进行查询优化<br>并且执行预编译，这样以后再执行这个SQL的时候就直接使用预编译的结果，这样可以大大提高执行的速度。</p>
 <h1 id="四-调整Where字句中的连接顺序"><a href="#四-调整Where字句中的连接顺序" class="headerlink" title="四.调整Where字句中的连接顺序"></a>四.调整Where字句中的连接顺序</h1><p>DBMS一般采用自下而上的顺序解析where字句，根据这个原理<strong>表连接最好写在其他where条件之前</strong>，那些可以<br>过滤掉最大数量记录。</p>
