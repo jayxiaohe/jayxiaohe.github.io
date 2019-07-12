@@ -4,83 +4,6 @@
   
     
     <entry>
-      <title>3,测试模板</title>
-      <link href="/2019/07/11/3-%E6%B5%8B%E8%AF%95%E6%A8%A1%E6%9D%BF/"/>
-      <url>/2019/07/11/3-%E6%B5%8B%E8%AF%95%E6%A8%A1%E6%9D%BF/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> xxx </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> xxx </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>testimasadasd</title>
-      <link href="/2019/07/11/testimasadasd/"/>
-      <url>/2019/07/11/testimasadasd/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>testimg332</title>
-      <link href="/2019/07/11/testimg332/"/>
-      <url>/2019/07/11/testimg332/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>testimg222</title>
-      <link href="/2019/07/11/testimg222/"/>
-      <url>/2019/07/11/testimg222/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>testimg</title>
-      <link href="/2019/07/11/testimg/"/>
-      <url>/2019/07/11/testimg/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Spring MVC 工作原理</title>
       <link href="/2019/07/11/2.Spring%20MVC%E5%8E%9F%E7%90%86/"/>
       <url>/2019/07/11/2.Spring%20MVC%E5%8E%9F%E7%90%86/</url>
@@ -97,9 +20,9 @@
       
         <tags>
             
-            <tag> Spring </tag>
-            
             <tag> Spring MVC </tag>
+            
+            <tag> Spring </tag>
             
             <tag> 面试 </tag>
             
@@ -126,9 +49,9 @@
       
         <tags>
             
-            <tag> Spring MVC </tag>
-            
             <tag> Spring Boot </tag>
+            
+            <tag> Spring MVC </tag>
             
             <tag> Spring Data JPA </tag>
             
@@ -168,7 +91,7 @@
       <link href="/2019/07/09/resume/"/>
       <url>/2019/07/09/resume/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>个人简历</p></blockquote><a id="more"></a><h1 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h1><ul><li>何鹏涛/男/1991</li><li>本科/西安工业大学 测控技术与仪器</li><li>工作年限：5年（Java经验2年）</li><li>期望职位：Java开发</li></ul><h1 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><ul><li>手机：18729312362</li><li>Email：<a href="mailto:495302067@qq.com" target="_blank" rel="noopener">495302067@qq.com</a></li></ul><h1 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h1><h2 id="中软国际-（-2018年3月-2019年6月-）"><a href="#中软国际-（-2018年3月-2019年6月-）" class="headerlink" title="中软国际 （ 2018年3月 ~ 2019年6月 ）"></a>中软国际 （ 2018年3月 ~ 2019年6月 ）</h2><h3 id="eSight-OpenStack-网管项目"><a href="#eSight-OpenStack-网管项目" class="headerlink" title="eSight-OpenStack 网管项目"></a>eSight-OpenStack 网管项目</h3><p>在此项目主要负责 eSight 对 OpenStack 及 Ceph 资源的同步和展示、资源数据的全景搜索、北向接口的开发等。使用的语音为Java及少量Ruby、Shell。在任职期间完成了10个新资源项的开发、老业务代码的梳理重构及文档整理。</p><h3 id="OpenStack模拟器项目"><a href="#OpenStack模拟器项目" class="headerlink" title="OpenStack模拟器项目"></a>OpenStack模拟器项目</h3><p>这是一个模拟器，使用tomcat+servlet，通过对外暴露API的方式，实现了对OpenStack平台的模拟。作为主要设计及开发成员，完成了30余个API的开发和测试，保证团队可以在缺少 OpenStack 硬件资源的情况下完成基础测试，提高了团队的测试效率。</p><h2 id="软通动力-（-2015年9月-2018年1月-）"><a href="#软通动力-（-2015年9月-2018年1月-）" class="headerlink" title="软通动力 （ 2015年9月 ~ 2018年1月 ）"></a>软通动力 （ 2015年9月 ~ 2018年1月 ）</h2><h3 id="企业无线配置器项目"><a href="#企业无线配置器项目" class="headerlink" title="企业无线配置器项目"></a>企业无线配置器项目</h3><p>参与华为配置报价工具STC 企业无线模块的数据开发（偏配置方向），包括：</p><ul><li>产品数据分析</li><li>产品BOM设计</li><li>产品配置代码实现</li><li>产品数据测试</li></ul><h1 id="开源项目和作品"><a href="#开源项目和作品" class="headerlink" title="开源项目和作品"></a>开源项目和作品</h1><h2 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h2><ul><li>博客项目：个人开发的基于 Spring Boot 的博客项目，主要包括用户管理/博客管理/评论管理/点赞管理/分类管理/标签管理/首页搜索等功能。<pre><code>项目使用Grade构建，主要架构为 SpringBoot + SpringMVC + Spring Data JPA + Spring Security + jQuery + Bootstrap，且使用了 Thymeleaf、Elasticsearch 等技术。已部署上线。[点此预览。](http://ttsmallhouse.club/blogs)</code></pre></li><li>天气预报项目：一个小型的天气预报项目，使用 Spring Cloud 实现微服务治理，主要目的是学习Spring Cloud。可根据用户 IP 所在城市或用户选择的城市来展示未来几天的天气情况。把天气数据采集、城市数据采集、天气预报展示等服务拆分，使用了 Eureka、Feign、Zuul、Hystrix、Config 等技术整合，且使用了 Quartz、Apache HttpClient、Thymeleaf、Bootstrap、Redis 等技术来实现功能。</li></ul><!-- - [天气预报项目](http://github.com/yourname/projectname) --><!-- - [TT博客](http://github.com/yourname/projectname) --><h1 id="技能清单"><a href="#技能清单" class="headerlink" title="技能清单"></a>技能清单</h1><ul><li>Java基础扎实</li><li>熟练使用Web框架：Spring/SpringBoot/SpingMVC/Spring Data JPA/Shiro</li><li>熟练使用 Mysql/Oracle 数据库技术</li><li>熟练使用版本管理工具：SVN/GIT</li><li>熟悉前端技术：HTML5/CSS/JavaScript/Ajax/Jquery/Thymeleaf</li><li>了解非关系型数据库：MongoDB/Redis</li><li>了解 Spring Cloud 微服务架构/Rabbitmq消息队列</li></ul><hr><h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>个人简历</p></blockquote><a id="more"></a><h1 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h1><ul><li>何鹏涛/男/1991</li><li>本科/西安工业大学 测控技术与仪器</li><li>工作年限：5年（<strong>Java经验3年</strong>)</li><li>期望职位：Java开发</li></ul><h1 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><ul><li>手机：18729312362</li><li>Email：<a href="mailto:hept_java@163.com" target="_blank" rel="noopener">hept_java@163.com</a></li></ul><h1 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h1><h2 id="中软国际-（-2018年3月-2019年6月-）"><a href="#中软国际-（-2018年3月-2019年6月-）" class="headerlink" title="中软国际 （ 2018年3月 ~ 2019年6月 ）"></a>中软国际 （ 2018年3月 ~ 2019年6月 ）</h2><h3 id="eSight-OpenStack-网管项目"><a href="#eSight-OpenStack-网管项目" class="headerlink" title="eSight-OpenStack 网管项目"></a>eSight-OpenStack 网管项目</h3><p>在此项目主要负责 eSight 对 OpenStack 及 Ceph 资源的同步和展示、资源数据的全局搜索、北向接口的开发等。使用的语言为Java及少量Ruby、Shell。在任职期间完成了16个新资源项的开发、老业务代码的梳理重构及文档整理。</p><h3 id="OpenStack模拟器项目"><a href="#OpenStack模拟器项目" class="headerlink" title="OpenStack模拟器项目"></a>OpenStack模拟器项目</h3><p>这是一个模拟器，使用tomcat+servlet，通过对外暴露API的方式，实现了对OpenStack平台的模拟。作为主要设计及开发成员，完成了30余个API的开发和测试，保证团队可以在缺少 OpenStack 硬件资源的情况下完成基础测试，提高了团队的测试效率。</p><h2 id="软通动力-（-2014年8月-2018年1月-）"><a href="#软通动力-（-2014年8月-2018年1月-）" class="headerlink" title="软通动力 （ 2014年8月 ~ 2018年1月 ）"></a>软通动力 （ 2014年8月 ~ 2018年1月 ）</h2><h3 id="企业无线配置器后台项目-（2016-5-2018-1）"><a href="#企业无线配置器后台项目-（2016-5-2018-1）" class="headerlink" title="企业无线配置器后台项目 （2016.5 ~ 2018.1）"></a>企业无线配置器后台项目 （2016.5 ~ 2018.1）</h3><p>参与华为配置报价工具STC 企业无线模块的后台开发。负责新产品适配、产品配置导出 excel 等功能。主要使用  SpringBoot + SpringMVC + MyBatis + Shiro + jQuery 等技术。任职期间负责了10余个产品的适配和测试。获得了华为客户的“合作之星”奖。</p><h3 id="企业无线配置器数据项目-（2014-8-2016-5）"><a href="#企业无线配置器数据项目-（2014-8-2016-5）" class="headerlink" title="企业无线配置器数据项目 （2014.8 ~ 2016.5）"></a>企业无线配置器数据项目 （2014.8 ~ 2016.5）</h3><p>参与华为配置报价工具STC 企业无线模块的数据开发（偏配置方向），包括：</p><ul><li>产品数据分析</li><li>产品BOM设计</li><li>产品配置代码实现</li><li>产品数据测试</li></ul><br><br><br><br><h1 id="开源项目和作品"><a href="#开源项目和作品" class="headerlink" title="开源项目和作品"></a>开源项目和作品</h1><h2 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h2><ul><li>博客项目：个人开发的基于 Spring Boot 的博客项目，主要包括用户管理/博客管理/评论管理/点赞管理/分类管理/标签管理/首页搜索等功能。<pre><code>项目使用Grade构建，主要架构为 SpringBoot + SpringMVC + Spring Data JPA + Spring Security + jQuery + Bootstrap，且使用了 Thymeleaf、Elasticsearch 等技术。已部署上线。[点此预览。](http://ttsmallhouse.club/blogs)</code></pre></li><li>天气预报项目：一个小型的天气预报项目，使用 Spring Cloud 实现微服务治理，主要目的是学习Spring Cloud。可根据用户 IP 所在城市或用户选择的城市来展示未来几天的天气情况。把天气数据采集、城市数据采集、天气预报展示等服务拆分，使用了 Eureka、Feign、Zuul、Hystrix、Config 等技术整合，且使用了 Quartz、Apache HttpClient、Thymeleaf、Bootstrap、Redis 等技术来实现功能。</li></ul><!-- - [天气预报项目](http://github.com/yourname/projectname) --><!-- - [TT博客](http://github.com/yourname/projectname) --><h1 id="技能清单"><a href="#技能清单" class="headerlink" title="技能清单"></a>技能清单</h1><ul><li>Java基础扎实</li><li>熟练使用Web框架：Spring/SpringBoot/SpingMVC/Spring Data JPA/Shiro</li><li>熟练使用 Mysql/Oracle 数据库技术</li><li>熟练使用版本管理工具：SVN/GIT</li><li>熟悉前端技术：HTML5/CSS/JavaScript/Ajax/Jquery/Thymeleaf</li><li>了解非关系型数据库：MongoDB/Redis</li><li>了解 Spring Cloud 微服务架构/Rabbitmq消息队列</li></ul><hr><h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>]]></content>
       
       
       <categories>
