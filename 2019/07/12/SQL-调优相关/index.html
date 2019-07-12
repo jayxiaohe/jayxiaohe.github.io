@@ -122,7 +122,7 @@
 <meta property="og:site_name" content="一个博客">
 <meta property="og:description" content="记录SQL调优相关内容">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-12T09:33:47.989Z">
+<meta property="og:updated_time" content="2019-07-12T09:35:27.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL 调优相关">
 <meta name="twitter:description" content="记录SQL调优相关内容">
@@ -464,7 +464,7 @@
                 
               
 
-              <time title="创建时间：2019-07-12 16:31:10 / 修改时间：17:33:47" itemprop="dateCreated datePublished" datetime="2019-07-12T16:31:10+08:00">2019-07-12</time>
+              <time title="创建时间：2019-07-12 16:31:10 / 修改时间：17:35:27" itemprop="dateCreated datePublished" datetime="2019-07-12T16:31:10+08:00">2019-07-12</time>
             </span>
           
 
@@ -574,7 +574,7 @@
 <h1 id="十二-用varchar-nvarchar-代替-char-nchar"><a href="#十二-用varchar-nvarchar-代替-char-nchar" class="headerlink" title="十二.用varchar/nvarchar 代替 char/nchar"></a>十二.用varchar/nvarchar 代替 char/nchar</h1><p>尽可能的使用 varchar/nvarchar 代替 char/nchar ，因为首先变长字段存储空间小，可以节省存储空间，其次对于查询来说，在一个相对较小的字段内搜索效率显然要高些。<br>不要以为 NULL 不需要空间，比如：char(100) 型，在字段建立时，空间就固定了， 不管是否插入值（NULL也包含在内），都是占用 100个字符的空间的，如果是varchar这样的变长字段， null 不占用空间。</p>
 <h1 id="十三-查询select语句优化"><a href="#十三-查询select语句优化" class="headerlink" title="十三.查询select语句优化"></a>十三.查询select语句优化</h1><p>1.任何地方都不要使用 select * from t ，用具体的字段列表代替“*”，不要返回用不到的任何字段<br>2.应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描，<br>如：<br><code>select id from t where num is null</code></p>
 <p>可以在num上设置默认值0，确保表中num列没有null值，<br>然后这样查询： </p>
-<figure class="highlight plain"><figcaption><span>id from t where num</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id from t where num=10 or num=20</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select id from t where num=0</span><br><span class="line">select id from t where num=10 or num=20</span><br></pre></td></tr></table></figure>
 
 <p>可以这样查询：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select id from t where num=10 </span><br><span class="line">union all </span><br><span class="line">select id from t where num=20</span><br></pre></td></tr></table></figure>
