@@ -122,7 +122,7 @@
 <meta property="og:site_name" content="一个博客">
 <meta property="og:description" content="记录SQL调优相关内容">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-12T09:31:46.493Z">
+<meta property="og:updated_time" content="2019-07-12T09:33:47.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL 调优相关">
 <meta name="twitter:description" content="记录SQL调优相关内容">
@@ -464,7 +464,7 @@
                 
               
 
-              <time title="创建时间：2019-07-12 16:31:10 / 修改时间：17:31:46" itemprop="dateCreated datePublished" datetime="2019-07-12T16:31:10+08:00">2019-07-12</time>
+              <time title="创建时间：2019-07-12 16:31:10 / 修改时间：17:33:47" itemprop="dateCreated datePublished" datetime="2019-07-12T16:31:10+08:00">2019-07-12</time>
             </span>
           
 
@@ -555,13 +555,10 @@
 <a id="more"></a>
 
 <p>在项目中,SQL的调优对项目的性能来讲至关重要,所有掌握常见的SQL调优方式是必不可少的,下面介绍几种常见的SQL的调优方式,供借鉴.</p>
-<h1 id="一-创建索引"><a href="#一-创建索引" class="headerlink" title="一.创建索引"></a>一.创建索引</h1><p>##1.要尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引 </p>
-<ul>
-<li>在经常需要进行检索的字段上创建索引，比如要按照表字段username进行检索，那么就应该在姓名字段上创建索引，如果经常要按照员工部门和员工岗位级别进行检索，那么就应该在员工部门和员工岗位级别这两个字段上创建索引。 <ul>
+<h1 id="一-创建索引"><a href="#一-创建索引" class="headerlink" title="一.创建索引"></a>一.创建索引</h1><h2 id="1-要尽量避免全表扫描，首先应考虑在-where-及-order-by-涉及的列上建立索引"><a href="#1-要尽量避免全表扫描，首先应考虑在-where-及-order-by-涉及的列上建立索引" class="headerlink" title="1.要尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引"></a>1.要尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引</h2><ul>
+<li>在经常需要进行检索的字段上创建索引，比如要按照表字段username进行检索，那么就应该在姓名字段上创建索引，如果经常要按照员工部门和员工岗位级别进行检索，那么就应该在员工部门和员工岗位级别这两个字段上创建索引。 </li>
 <li>创建索引给检索带来的性能提升往往是巨大的，因此在发现检索速度过慢的时候应该首先想到的就是创建索引。 </li>
 <li>一个表的索引数最好不要超过6个，若太多则应考虑一些不常使用到的列上建的索引是否有 必要。索引并不是越多越好，索引固然可以提高相应的 select 的效率，但同时也 <strong>降低了 insert 及 update 的效率，因为 insert 或 update 时有可能会重建索引。</strong>所以怎样建索引需要慎重考虑，视具体情况而定。</li>
-</ul>
-</li>
 </ul>
 <h1 id="二-避免在索引上使用计算"><a href="#二-避免在索引上使用计算" class="headerlink" title="二.避免在索引上使用计算"></a>二.避免在索引上使用计算</h1><p>在where字句中，如果索引列是计算或者函数的一部分，DBMS的优化器将不会使用索引而使用全表查询,函数属于计算的一种,同时在 in 和 exists 中通常情况下使用 exists，因为 <strong>in不走索引效率低</strong>：<br>效率低：<br><code>select * from user where salary*22&gt;11000 (salary是索引列)</code></p>
 <p>效率高：<br><code>select * from user where salary&gt;11000/22(salary是索引列)</code></p>
@@ -597,7 +594,7 @@
 <h1 id="十五-删除Delete语句优化语句"><a href="#十五-删除Delete语句优化语句" class="headerlink" title="十五. 删除Delete语句优化语句"></a>十五. 删除Delete语句优化语句</h1><p>1.最高效的删除重复记录方法 ( 因为使用了ROWID)例子：<br><code>DELETE FROM EMP E WHERE E.ROWID &gt; (SELECT MIN(X.ROWID) FROM EMP X WHERE X.EMP_NO = E.EMP_NO);</code></p>
 <h1 id="十六-插入Insert语句优化"><a href="#十六-插入Insert语句优化" class="headerlink" title="十六.插入Insert语句优化"></a>十六.插入Insert语句优化</h1><p>在新建临时表时，如果一次性插入数据量很大，那么可以使用 select into 代替 create table，避免造成大量 log ，以提高速度；如果数据量不大，为了缓和系统表的资源，应先create table，然后insert。</p>
 <hr>
-<p>#其他资料<br><a href="https://blog.csdn.net/wqc19920906/article/details/79800374" target="_blank" rel="noopener">1.Sql 语句中 IN 和 EXISTS 的区别及应用</a></p>
+<h1 id="其他资料"><a href="#其他资料" class="headerlink" title="其他资料"></a>其他资料</h1><p><a href="https://blog.csdn.net/wqc19920906/article/details/79800374" target="_blank" rel="noopener">1.Sql 语句中 IN 和 EXISTS 的区别及应用</a></p>
 
       
     </div>
@@ -885,7 +882,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-创建索引"><span class="nav-number">1.</span> <span class="nav-text">一.创建索引</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-避免在索引上使用计算"><span class="nav-number">2.</span> <span class="nav-text">二.避免在索引上使用计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-使用预编译查询"><span class="nav-number">3.</span> <span class="nav-text">三.使用预编译查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-调整Where字句中的连接顺序"><span class="nav-number">4.</span> <span class="nav-text">四.调整Where字句中的连接顺序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-尽量将多条SQL语句压缩到一句SQL中"><span class="nav-number">5.</span> <span class="nav-text">五.尽量将多条SQL语句压缩到一句SQL中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六-用where字句替换HAVING字句"><span class="nav-number">6.</span> <span class="nav-text">六.用where字句替换HAVING字句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七-使用表的别名"><span class="nav-number">7.</span> <span class="nav-text">七.使用表的别名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八-用union-all-替换union"><span class="nav-number">8.</span> <span class="nav-text">八.用union all 替换union</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九-考虑使用“临时表”暂存中间结果"><span class="nav-number">9.</span> <span class="nav-text">九.考虑使用“临时表”暂存中间结果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十-只在必要的情况下才使用事务begin-translation"><span class="nav-number">10.</span> <span class="nav-text">十.只在必要的情况下才使用事务begin translation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十一-尽量避免使用游标"><span class="nav-number">11.</span> <span class="nav-text">十一.尽量避免使用游标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十二-用varchar-nvarchar-代替-char-nchar"><span class="nav-number">12.</span> <span class="nav-text">十二.用varchar/nvarchar 代替 char/nchar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十三-查询select语句优化"><span class="nav-number">13.</span> <span class="nav-text">十三.查询select语句优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十四-更新Update语句优化"><span class="nav-number">14.</span> <span class="nav-text">十四.更新Update语句优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十五-删除Delete语句优化语句"><span class="nav-number">15.</span> <span class="nav-text">十五. 删除Delete语句优化语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十六-插入Insert语句优化"><span class="nav-number">16.</span> <span class="nav-text">十六.插入Insert语句优化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-创建索引"><span class="nav-number">1.</span> <span class="nav-text">一.创建索引</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-要尽量避免全表扫描，首先应考虑在-where-及-order-by-涉及的列上建立索引"><span class="nav-number">1.1.</span> <span class="nav-text">1.要尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-避免在索引上使用计算"><span class="nav-number">2.</span> <span class="nav-text">二.避免在索引上使用计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-使用预编译查询"><span class="nav-number">3.</span> <span class="nav-text">三.使用预编译查询</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-调整Where字句中的连接顺序"><span class="nav-number">4.</span> <span class="nav-text">四.调整Where字句中的连接顺序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-尽量将多条SQL语句压缩到一句SQL中"><span class="nav-number">5.</span> <span class="nav-text">五.尽量将多条SQL语句压缩到一句SQL中</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六-用where字句替换HAVING字句"><span class="nav-number">6.</span> <span class="nav-text">六.用where字句替换HAVING字句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七-使用表的别名"><span class="nav-number">7.</span> <span class="nav-text">七.使用表的别名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八-用union-all-替换union"><span class="nav-number">8.</span> <span class="nav-text">八.用union all 替换union</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九-考虑使用“临时表”暂存中间结果"><span class="nav-number">9.</span> <span class="nav-text">九.考虑使用“临时表”暂存中间结果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十-只在必要的情况下才使用事务begin-translation"><span class="nav-number">10.</span> <span class="nav-text">十.只在必要的情况下才使用事务begin translation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十一-尽量避免使用游标"><span class="nav-number">11.</span> <span class="nav-text">十一.尽量避免使用游标</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十二-用varchar-nvarchar-代替-char-nchar"><span class="nav-number">12.</span> <span class="nav-text">十二.用varchar/nvarchar 代替 char/nchar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十三-查询select语句优化"><span class="nav-number">13.</span> <span class="nav-text">十三.查询select语句优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十四-更新Update语句优化"><span class="nav-number">14.</span> <span class="nav-text">十四.更新Update语句优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十五-删除Delete语句优化语句"><span class="nav-number">15.</span> <span class="nav-text">十五. 删除Delete语句优化语句</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十六-插入Insert语句优化"><span class="nav-number">16.</span> <span class="nav-text">十六.插入Insert语句优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他资料"><span class="nav-number">17.</span> <span class="nav-text">其他资料</span></a></li></ol></div>
             
 
           </div>
