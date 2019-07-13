@@ -121,7 +121,7 @@
   <meta name="description" content="本文介绍Spring Boot与消息">
 <meta name="keywords" content="Rabbitmq,Spring Boot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Boot与消息-doing">
+<meta property="og:title" content="Spring Boot与消息">
 <meta property="og:url" content="http://yoursite.com/2019/07/13/Spring-Boot与消息/index.html">
 <meta property="og:site_name" content="一个博客">
 <meta property="og:description" content="本文介绍Spring Boot与消息">
@@ -130,9 +130,9 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code2.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code3.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code4.png">
-<meta property="og:updated_time" content="2019-07-13T15:31:33.224Z">
+<meta property="og:updated_time" content="2019-07-13T15:54:13.345Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Boot与消息-doing">
+<meta name="twitter:title" content="Spring Boot与消息">
 <meta name="twitter:description" content="本文介绍Spring Boot与消息">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code1.png">
 
@@ -152,7 +152,7 @@
   };
 </script>
 
-  <title>Spring Boot与消息-doing | 一个博客</title>
+  <title>Spring Boot与消息 | 一个博客</title>
   
 
 
@@ -445,7 +445,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Spring Boot与消息-doing
+          <h1 class="post-title" itemprop="name headline">Spring Boot与消息
 
               
             
@@ -473,7 +473,7 @@
                 
               
 
-              <time title="创建时间：2019-07-13 16:58:14 / 修改时间：23:31:33" itemprop="dateCreated datePublished" datetime="2019-07-13T16:58:14+08:00">2019-07-13</time>
+              <time title="创建时间：2019-07-13 16:58:14 / 修改时间：23:54:13" itemprop="dateCreated datePublished" datetime="2019-07-13T16:58:14+08:00">2019-07-13</time>
             </span>
           
 
@@ -595,10 +595,7 @@
 <li>Publisher：消息的生产者，也是一个向交换器发布消息的客户端应用程序。</li>
 <li>Exchange：交换器，用来接收生产者发送的消息并将这些消息路由给服务器中的队列。有四种类型：direct（默认）、fanout、topic、headers。不同的类型，转发消息的策略有区别。</li>
 <li>Queue：用来保存消息，直到发送给消费者。它是消息的容器，也是消息的终点。一个消息可投入一个或多个队列。消息一直在队列里面，等待消费者连接到这个队列将其取走。</li>
-<li>Binding：绑定，用于消息队列和交换器之间的关联。一个绑定就是基于路由键将交换器和消息队列连接起来的路由规则，所以可以将交换器理解成一个由绑定构成的路由表。<blockquote>
-<p>Exchange 和Queue的绑定可以是多对多的关系。</p>
-</blockquote>
-</li>
+<li>Binding：绑定，用于消息队列和交换器之间的关联。一个绑定就是基于路由键将交换器和消息队列连接起来的路由规则，所以可以将交换器理解成一个由绑定构成的路由表。<br><code>Exchange 和Queue的绑定可以是多对多的关系。</code></li>
 <li>Connection：网络连接，比如一个TCP连接。</li>
 <li>Channel：信道，多路复用连接中的一条独立的双向数据流通道。信道是建立在真实的TCP连接内的虚拟连接，AMQP 命令都是通过信道发出去的，不管是发布消息、订阅队列还是接收消息，这些动作都是通过信道完成。因为对于操作系统来说建立和销毁 TCP 都是非常昂贵的开销，所以引入了信道的概念，以复用一条 TCP 连接。</li>
 <li>Consumer：消息的消费者，表示一个从消息队列中取得消息的客户端应用程序。</li>
@@ -609,7 +606,7 @@
 </ul>
 <h1 id="3-RabbitMQ运行机制"><a href="#3-RabbitMQ运行机制" class="headerlink" title="3.RabbitMQ运行机制"></a>3.RabbitMQ运行机制</h1><h2 id="1-Exchange类型"><a href="#1-Exchange类型" class="headerlink" title="1.Exchange类型"></a>1.Exchange类型</h2><h3 id="1-Direct-Exchange"><a href="#1-Direct-Exchange" class="headerlink" title="1.Direct Exchange"></a>1.Direct Exchange</h3><p>消息中的路由键（routing key）如果和 Binding 中的 binding key 一致， 交换器就将消息发到对应的队列中。路由键与队列名完全匹配，如果一个队列绑定到交换机要求路由键为“dog”，则只转发 routing key 标记为“dog”的消息，不会转发“dog.puppy”，也不会转发“dog.guard”等等。它是完全匹配、单播的模式。</p>
 <h3 id="2-Fanout-Exchange"><a href="#2-Fanout-Exchange" class="headerlink" title="2.Fanout Exchange"></a>2.Fanout Exchange</h3><p>每个发到 fanout 类型交换器的消息都会分到所有绑定的队列上去。fanout 交换器不处理路由键，只是简单的将队列绑定到交换器上，每个发送到交换器的消息都会被转发到与该交换器绑定的所有队列上。很像子网广播，每台子网内的主机都获得了一份复制的消息。<strong>fanout 类型转发消息是最快的。(广播模式)</strong></p>
-<h3 id="3-Topic-Exchange"><a href="#3-Topic-Exchange" class="headerlink" title="3.Topic Exchange"></a>3.Topic Exchange</h3><p>topic 交换器通过模式匹配分配消息的路由键属性，将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。它将路由键和绑定键的字符串切分成单词，这些单词之间用点隔开。它同样也会识别两个通配符：符号“#”和符号“<em>”。#匹配0个或多个单词，</em>匹配一个单词。</p>
+<h3 id="3-Topic-Exchange"><a href="#3-Topic-Exchange" class="headerlink" title="3.Topic Exchange"></a>3.Topic Exchange</h3><p>topic 交换器通过模式匹配分配消息的路由键属性，将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。它将路由键和绑定键的字符串切分成单词，这些单词之间用点隔开。它同样也会识别两个通配符：符号“#”和符号“*“。#匹配0个或多个单词，*匹配一个单词。</p>
 <h1 id="4-SpringBoot整合RabbitMQ"><a href="#4-SpringBoot整合RabbitMQ" class="headerlink" title="4.SpringBoot整合RabbitMQ"></a>4.SpringBoot整合RabbitMQ</h1><h2 id="1-导包：spring-boot-starter-amqp"><a href="#1-导包：spring-boot-starter-amqp" class="headerlink" title="1.导包：spring-boot-starter-amqp"></a>1.导包：spring-boot-starter-amqp</h2><p>建议在start.spring.io中快速创建。<br><a href="https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/htmlsingle/#using-boot-starter" target="_blank" rel="noopener">这里</a> 可查看 Spring Boot 支持的starter。</p>
 <h2 id="2-自动配置"><a href="#2-自动配置" class="headerlink" title="2.自动配置"></a>2.自动配置</h2><ul>
 <li>RabbitAutoConfiguration类。</li>
@@ -619,13 +616,13 @@
 <li>AmqpAdmin：RabbitMQ系统管理功能组件。可帮我们创建队列、交换器等等。</li>
 </ul>
 <h2 id="3-application-properties"><a href="#3-application-properties" class="headerlink" title="3.application.properties"></a>3.application.properties</h2><p>配置rabbitmq的IP、用户名、密码、端口（默认为5672）、vhost（默认为”/“）等。</p>
-<h2 id="4-Coding"><a href="#4-Coding" class="headerlink" title="4.Coding"></a>4.Coding</h2><p>最简单的发消息的方法：<br><code>rabbitTemplate.convertAndSend(exchange, routeKey, object)</code><br>其中，object默认是消息提。只需传入要发送的对象，会自动序列化给rabbitmq。如图：<br><img src="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code1.png" alt="code1"><br>接收并打印消息。如图：<br><img src="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code2.png" alt="code2"><br>注意：若发送消息时传入了对象，其序列化方式为jdk自身的序列化方式，阅读不太友好。我们可以自定义序列化方式。如图：<br><img src="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code3.png" alt="code3"></p>
+<h2 id="4-Coding"><a href="#4-Coding" class="headerlink" title="4.Coding"></a>4.Coding</h2><p>最简单的发消息的方法：<br><code>rabbitTemplate.convertAndSend(exchange, routeKey, object)</code><br>其中，object默认是消息体。只需传入要发送的对象，会自动序列化给rabbitmq。如图：<br><img src="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code1.png" alt="code1"><br>接收并打印消息。如图：<br><img src="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code2.png" alt="code2"><br>注意：若发送消息时传入了对象，其序列化方式为jdk自身的序列化方式，阅读不太友好。我们可以自定义序列化方式。如图：<br><img src="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code3.png" alt="code3"></p>
 <h1 id="5-监听消息队列：-RabbitListener-EnableRabbit"><a href="#5-监听消息队列：-RabbitListener-EnableRabbit" class="headerlink" title="5.监听消息队列：@RabbitListener @EnableRabbit"></a>5.监听消息队列：@RabbitListener @EnableRabbit</h1><p>订单系统中，若用户下单，则库存系统中对应的产品就要更新库存。实现方式：</p>
 <ul>
 <li>使用@RabbitListener注解在service方法上，参数为queues=”队列名”。可监听此队列的内容。方法的入参可写消息对象类，也可写Message（org.springframework.amqp.core）。这样，在方法内可使用msg.getBody()获取消息体，也可用msg.getMessageProperties()获取消息头。</li>
 <li>在spring boot入口类上标注@EnableRabbit。</li>
 </ul>
-<h1 id="6-AmqpAdmin：RabbitMQ系统管理功能组件"><a href="#6-AmqpAdmin：RabbitMQ系统管理功能组件" class="headerlink" title="6.AmqpAdmin：RabbitMQ系统管理功能组件"></a>6.AmqpAdmin：RabbitMQ系统管理功能组件</h1><p>AmqpAdmin可用来创建和删除queue、exchange、binding（绑定规则）。<br>** 这个类已经由RabbitAutoConfiguration类创建了bean，我们可以直接注入。如下图，注入之后，使用它创建了一个名为’amqpadmin.exchange’，direct类型的交换器：**<br><img src="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code4.png" alt="code4"></p>
+<h1 id="6-AmqpAdmin：RabbitMQ系统管理功能组件"><a href="#6-AmqpAdmin：RabbitMQ系统管理功能组件" class="headerlink" title="6.AmqpAdmin：RabbitMQ系统管理功能组件"></a>6.AmqpAdmin：RabbitMQ系统管理功能组件</h1><p>AmqpAdmin可用来创建和删除queue、exchange、binding（绑定规则）。<br><strong>RabbitAutoConfiguration类已经创建了AmqpAdmin的bean，我们可以直接注入。如下图，注入之后，使用它创建了一个名为’amqpadmin.exchange’，direct类型的交换器：</strong><br><img src="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code4.png" alt="code4"></p>
 <hr>
 
       
