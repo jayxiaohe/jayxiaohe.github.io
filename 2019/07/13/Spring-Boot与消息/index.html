@@ -122,12 +122,12 @@
 <meta property="og:site_name" content="一个博客">
 <meta property="og:description" content="本文介绍Spring Boot与消息">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/.com//code1.png">
-<meta property="og:updated_time" content="2019-07-13T13:50:42.663Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code1.png">
+<meta property="og:updated_time" content="2019-07-13T14:31:34.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot与消息-doing">
 <meta name="twitter:description" content="本文介绍Spring Boot与消息">
-<meta name="twitter:image" content="http://yoursite.com/.com//code1.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code1.png">
 
 
 
@@ -466,7 +466,7 @@
                 
               
 
-              <time title="创建时间：2019-07-13 16:58:14 / 修改时间：21:50:42" itemprop="dateCreated datePublished" datetime="2019-07-13T16:58:14+08:00">2019-07-13</time>
+              <time title="创建时间：2019-07-13 16:58:14 / 修改时间：22:31:34" itemprop="dateCreated datePublished" datetime="2019-07-13T16:58:14+08:00">2019-07-13</time>
             </span>
           
 
@@ -565,17 +565,25 @@
 <li>消息代理（消息中间件的服务器）</li>
 <li>目的地。两种形式：队列（点对点）、主题（发布/订阅）</li>
 <li>点对点式：消息只有一个唯一的发送者和接收者。</li>
-<li>发布订阅式：发布者发送消息到主题，多个接收者监听这个主题。消息到达时它们同时收到消息。<br>消息先发送给消息代理，再发给目的地。<h2 id="3-两种消息代理规范"><a href="#3-两种消息代理规范" class="headerlink" title="3.两种消息代理规范"></a>3.两种消息代理规范</h2></li>
+<li>发布订阅式：发布者发送消息到主题，多个接收者监听这个主题。消息到达时它们同时收到消息。<br>消息先发送给消息代理，再发给目的地。</li>
+</ul>
+<h2 id="3-两种消息代理规范"><a href="#3-两种消息代理规范" class="headerlink" title="3.两种消息代理规范"></a>3.两种消息代理规范</h2><ul>
 <li>JMS。Java消息服务。</li>
-<li>AMQP。高级消息队列协议。<h2 id="4-Spring支持"><a href="#4-Spring支持" class="headerlink" title="4. Spring支持"></a>4. Spring支持</h2></li>
+<li>AMQP。高级消息队列协议。</li>
+</ul>
+<h2 id="4-Spring支持"><a href="#4-Spring支持" class="headerlink" title="4. Spring支持"></a>4. Spring支持</h2><ul>
 <li>spring-jms提供了对JMS的支持</li>
 <li>spring-rabbit提供了对AMQP的支持</li>
 <li>需要ConnectionFactory的实现来连接消息代理</li>
 <li>提供JmsTemplate、RabbitTemplate来发送消息</li>
 <li>@JmsListener(JMS)、@RabbitmqListener(AMQP) 注解在方法上监听消息代理发布的消息</li>
-<li>@EnableJms、@EnableRabbit开启支持<h2 id="5-Spring-Boot自动配置"><a href="#5-Spring-Boot自动配置" class="headerlink" title="5.Spring Boot自动配置"></a>5.Spring Boot自动配置</h2></li>
+<li>@EnableJms、@EnableRabbit开启支持</li>
+</ul>
+<h2 id="5-Spring-Boot自动配置"><a href="#5-Spring-Boot自动配置" class="headerlink" title="5.Spring Boot自动配置"></a>5.Spring Boot自动配置</h2><ul>
 <li>JmsAutoConfiguration</li>
-<li>RabbitAutoConfiguration<h1 id="2-RabbitMQ简介"><a href="#2-RabbitMQ简介" class="headerlink" title="2.RabbitMQ简介"></a>2.RabbitMQ简介</h1><h2 id="1-核心概念"><a href="#1-核心概念" class="headerlink" title="1.核心概念"></a>1.核心概念</h2></li>
+<li>RabbitAutoConfiguration</li>
+</ul>
+<h1 id="2-RabbitMQ简介"><a href="#2-RabbitMQ简介" class="headerlink" title="2.RabbitMQ简介"></a>2.RabbitMQ简介</h1><h2 id="1-核心概念"><a href="#1-核心概念" class="headerlink" title="1.核心概念"></a>1.核心概念</h2><ul>
 <li>Message：消息。由消息头。消息体组成。</li>
 <li>Publisher：消息的生产者，也是一个向交换器发布消息的客户端应用程序。</li>
 <li>Exchange：交换器，用来接收生产者发送的消息并将这些消息路由给服务器中的队列。有四种类型：direct（默认）、fanout、topic、headers。不同的类型，转发消息的策略有区别。</li>
@@ -601,9 +609,11 @@
 <li>有自动配置了连接工厂ConnectionFactory。</li>
 <li>RabbitProperties封装了RabbitMQ的配置</li>
 <li>RabbitTemplate：给RabbitMQ发送和接收消息</li>
-<li>AmqpAdmin：RabbitMQ系统管理功能组件。可帮我们创建队列、交换器等等。<h2 id="3-application-properties"><a href="#3-application-properties" class="headerlink" title="3.application.properties"></a>3.application.properties</h2>配置rabbitmq的IP、用户名、密码、端口（默认为5672）、vhost（默认为”/“）等。<h2 id="4-Coding"><a href="#4-Coding" class="headerlink" title="4.Coding"></a>4.Coding</h2>最简单的发消息的方法：<br><code>rabbitTemplate.convertAndSend(exchange, routeKey, object)</code><br>其中，object默认是消息提。只需传入要发送的对象，会自动序列化给rabbitmq。如图：<br><img src="/.com//code1.png" alt="code1"></li>
+<li>AmqpAdmin：RabbitMQ系统管理功能组件。可帮我们创建队列、交换器等等。</li>
 </ul>
-<p>#todo<br>a存储过程</p>
+<h2 id="3-application-properties"><a href="#3-application-properties" class="headerlink" title="3.application.properties"></a>3.application.properties</h2><p>配置rabbitmq的IP、用户名、密码、端口（默认为5672）、vhost（默认为”/“）等。</p>
+<h2 id="4-Coding"><a href="#4-Coding" class="headerlink" title="4.Coding"></a>4.Coding</h2><p>最简单的发消息的方法：<br><code>rabbitTemplate.convertAndSend(exchange, routeKey, object)</code><br>其中，object默认是消息提。只需传入要发送的对象，会自动序列化给rabbitmq。如图：<br><img src="https://raw.githubusercontent.com/jayxiaohe/picBed/master/code1.png" alt="code1"></p>
+<p>#todo<br>abc存储过程</p>
 
       
     </div>
