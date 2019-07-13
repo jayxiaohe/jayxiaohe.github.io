@@ -123,7 +123,7 @@
 <meta property="og:description" content="本文介绍Spring Boot与消息">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/.com//code1.png">
-<meta property="og:updated_time" content="2019-07-13T13:40:39.697Z">
+<meta property="og:updated_time" content="2019-07-13T13:50:42.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot与消息-doing">
 <meta name="twitter:description" content="本文介绍Spring Boot与消息">
@@ -466,7 +466,7 @@
                 
               
 
-              <time title="创建时间：2019-07-13 16:58:14 / 修改时间：21:40:39" itemprop="dateCreated datePublished" datetime="2019-07-13T16:58:14+08:00">2019-07-13</time>
+              <time title="创建时间：2019-07-13 16:58:14 / 修改时间：21:50:42" itemprop="dateCreated datePublished" datetime="2019-07-13T16:58:14+08:00">2019-07-13</time>
             </span>
           
 
@@ -559,7 +559,9 @@
 <h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h1><h2 id="1-场景"><a href="#1-场景" class="headerlink" title="1.场景"></a>1.场景</h2><ul>
 <li>异步处理，如用户注册场景。</li>
 <li>应用解耦。如订单系统和库存系统之间。下单后库存-1，之间用消息队列。</li>
-<li>流量削峰。秒杀系统中，用户的请求进入消息队列，设置消息队列的长度==商品数。后续的请求不会进入消息队列。<h2 id="2-消息服务中两个重要概念"><a href="#2-消息服务中两个重要概念" class="headerlink" title="2.消息服务中两个重要概念"></a>2.消息服务中两个重要概念</h2></li>
+<li>流量削峰。秒杀系统中，用户的请求进入消息队列，设置消息队列的长度==商品数。后续的请求不会进入消息队列。</li>
+</ul>
+<h2 id="2-消息服务中两个重要概念"><a href="#2-消息服务中两个重要概念" class="headerlink" title="2.消息服务中两个重要概念"></a>2.消息服务中两个重要概念</h2><ul>
 <li>消息代理（消息中间件的服务器）</li>
 <li>目的地。两种形式：队列（点对点）、主题（发布/订阅）</li>
 <li>点对点式：消息只有一个唯一的发送者和接收者。</li>
@@ -601,7 +603,7 @@
 <li>RabbitTemplate：给RabbitMQ发送和接收消息</li>
 <li>AmqpAdmin：RabbitMQ系统管理功能组件。可帮我们创建队列、交换器等等。<h2 id="3-application-properties"><a href="#3-application-properties" class="headerlink" title="3.application.properties"></a>3.application.properties</h2>配置rabbitmq的IP、用户名、密码、端口（默认为5672）、vhost（默认为”/“）等。<h2 id="4-Coding"><a href="#4-Coding" class="headerlink" title="4.Coding"></a>4.Coding</h2>最简单的发消息的方法：<br><code>rabbitTemplate.convertAndSend(exchange, routeKey, object)</code><br>其中，object默认是消息提。只需传入要发送的对象，会自动序列化给rabbitmq。如图：<br><img src="/.com//code1.png" alt="code1"></li>
 </ul>
-<p>#todo<br>存储过程</p>
+<p>#todo<br>a存储过程</p>
 
       
     </div>
