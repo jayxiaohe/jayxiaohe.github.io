@@ -35,19 +35,19 @@
       <link href="/2019/07/12/Spring-%E7%BC%93%E5%AD%98/"/>
       <url>/2019/07/12/Spring-%E7%BC%93%E5%AD%98/</url>
       
-        <content type="html"><![CDATA[<p>整理中…</p><a id="more"></a><h1 id="1-整合"><a href="#1-整合" class="headerlink" title="1.整合"></a>1.整合</h1><h2 id="1-整合mybatis。"><a href="#1-整合mybatis。" class="headerlink" title="1.整合mybatis。"></a>1.整合mybatis。</h2><ul><li>配置文件中配置数据源：spring.datasource.url、username/password。</li><li>启动类设置@MapperScan(“mapper包全限定名”)</li><li>mapper包下的接口加@Mapper。</li><li>注解形式：在mapper包下的接口中写@Insert @Select…等，注解参数写sql语句</li><li>xml形式。待补充。</li></ul><h2 id="2-整合redis"><a href="#2-整合redis" class="headerlink" title="2.整合redis"></a>2.整合redis</h2><ul><li>添加依赖 redis starter</li><li>配置文件中配置：spring.redis.host=IP</li><li>在service等处注入 RedisTemplate、StringRedisTemplate。</li><li>若要存对象</li></ul>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>整理中…</p></blockquote><a id="more"></a><h1 id="1-整合"><a href="#1-整合" class="headerlink" title="1.整合"></a>1.整合</h1><h2 id="1-整合mybatis。"><a href="#1-整合mybatis。" class="headerlink" title="1.整合mybatis。"></a>1.整合mybatis。</h2><ul><li>配置文件中配置数据源：spring.datasource.url、username/password。</li><li>启动类设置@MapperScan(“mapper包全限定名”)</li><li>mapper包下的接口加@Mapper。</li><li>注解形式：在mapper包下的接口中写@Insert @Select…等，注解参数写sql语句</li><li>xml形式。待补充。</li></ul><h2 id="2-整合redis"><a href="#2-整合redis" class="headerlink" title="2.整合redis"></a>2.整合redis</h2><ul><li>添加依赖 redis starter</li><li>配置文件中配置：spring.redis.host=IP</li><li>在service等处注入 RedisTemplate、StringRedisTemplate。</li><li>若要存对象</li></ul>]]></content>
       
       
       <categories>
           
-          <category> xxx </category>
+          <category> 面试 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> xxx </tag>
+            <tag> Spring Boot </tag>
             
         </tags>
       
