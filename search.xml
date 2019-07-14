@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>面试题记录</title>
+      <link href="/2019/07/14/4-%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+      <url>/2019/07/14/4-%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<p>一些面试题整理</p><a id="more"></a><!-- 链接样式<a href="https://github.com/Snailclimb/JavaGuide/blob/master/docs/database/Redis/Redis.md" class="LinkCard">Redis</a>--><h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="HashMap是怎么实现key是唯一的"><a href="#HashMap是怎么实现key是唯一的" class="headerlink" title="HashMap是怎么实现key是唯一的"></a>HashMap是怎么实现key是唯一的</h2><p>参考 <a href="https://snailclimb.gitee.io/javaguide/#/java/collection/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98?id=hashmap%e7%9a%84%e5%ba%95%e5%b1%82%e5%ae%9e%e7%8e%b0" target="_blank" rel="noopener">这里</a></p><h3 id="JDK1-8-之前"><a href="#JDK1-8-之前" class="headerlink" title="JDK1.8 之前"></a>JDK1.8 之前</h3><p> HashMap 底层是 数组和链表 结合在一起使用，也就是链表散列。HashMap 通过 key 的 hashCode 经过扰动函数处理过后得到 hash 值，然后通过 (n - 1) &amp; hash 判断当前元素存放的位置（这里的 n 指的是数组的长度），如果当前位置存在元素的话，就判断该元素与要存入的元素的 hash 值以及 key 是否相同，如果相同的话，直接覆盖，不相同就通过拉链法解决冲突。<br><strong>所谓扰动函数指的就是 HashMap 的 hash 方法。使用 hash 方法也就是扰动函数是为了防止一些实现比较差的 hashCode() 方法 换句话说使用扰动函数之后可以减少碰撞。</strong><br><strong>所谓 “拉链法” 就是：将链表和数组相结合。也就是说创建一个链表数组，数组中每一格就是一个链表。若遇到哈希冲突，则将冲突的值加到链表中即可。</strong></p><h3 id="JDK1-8-之后"><a href="#JDK1-8-之后" class="headerlink" title="JDK1.8 之后"></a>JDK1.8 之后</h3><p>相比于之前的版本， JDK1.8之后在解决哈希冲突时有了较大的变化，当链表长度大于阈值（默认为8）时，将链表转化为红黑树，以减少搜索时间。</p><blockquote><p>TreeMap、TreeSet以及JDK1.8之后的HashMap底层都用到了红黑树。红黑树就是为了解决二叉查找树的缺陷，因为二叉查找树在某些情况下会退化成一个线性结构。</p></blockquote><h1 id="简单说说nio是什么，是哪个版本开始有的？"><a href="#简单说说nio是什么，是哪个版本开始有的？" class="headerlink" title="简单说说nio是什么，是哪个版本开始有的？"></a>简单说说nio是什么，是哪个版本开始有的？</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> xxx </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> xxx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spring Boot与消息</title>
       <link href="/2019/07/13/Spring-Boot%E4%B8%8E%E6%B6%88%E6%81%AF/"/>
       <url>/2019/07/13/Spring-Boot%E4%B8%8E%E6%B6%88%E6%81%AF/</url>
@@ -60,7 +85,7 @@
       <link href="/2019/07/12/3-%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98%E8%B5%84%E6%BA%90/"/>
       <url>/2019/07/12/3-%E4%B8%80%E4%BA%9B%E9%9D%A2%E8%AF%95%E9%A2%98%E8%B5%84%E6%BA%90/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>面试资源整理</p></blockquote><a id="more"></a><h1 id="💥-Redis"><a href="#💥-Redis" class="headerlink" title="💥 Redis"></a>💥 Redis</h1><p><a href="https://github.com/Snailclimb/JavaGuide/blob/master/docs/database/Redis/Redis.md" class="LinkCard" target="_blank" rel="noopener">Redis</a></p><h1 id="💥-Git"><a href="#💥-Git" class="headerlink" title="💥 Git"></a>💥 Git</h1><p><a href="https://github.com/Snailclimb/JavaGuide/blob/master/docs/tools/Git.md" class="LinkCard" target="_blank" rel="noopener">Redis</a></p><hr>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>面试资源整理</p></blockquote><a id="more"></a><h1 id="💥-Redis"><a href="#💥-Redis" class="headerlink" title="💥 Redis"></a>💥 Redis</h1><p><a href="https://github.com/Snailclimb/JavaGuide/blob/master/docs/database/Redis/Redis.md" class="LinkCard" target="_blank" rel="noopener">Redis</a></p><h1 id="💥-Git"><a href="#💥-Git" class="headerlink" title="💥 Git"></a>💥 Git</h1><p><a href="https://github.com/Snailclimb/JavaGuide/blob/master/docs/tools/Git.md" class="LinkCard" target="_blank" rel="noopener">Redis</a></p><h1 id="💥-3y大神"><a href="#💥-3y大神" class="headerlink" title="💥 3y大神"></a>💥 3y大神</h1><p><a href="https://github.com/ZhongFuCheng3y/3y" class="LinkCard" target="_blank" rel="noopener">3y</a></p><h1 id="💥-尚硅谷视频-高频面试题"><a href="#💥-尚硅谷视频-高频面试题" class="headerlink" title="💥 尚硅谷视频-高频面试题"></a>💥 尚硅谷视频-高频面试题</h1><h2 id="3y"><a href="#3y" class="headerlink" title="3y"></a><a href="https://www.bilibili.com/video/av37602130/?p=10" class="LinkCard" target="_blank" rel="noopener">3y</a></h2>]]></content>
       
       
       <categories>
