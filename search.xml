@@ -74,9 +74,9 @@
       
         <tags>
             
-            <tag> Spring Boot </tag>
-            
             <tag> Rabbitmq </tag>
+            
+            <tag> Spring Boot </tag>
             
         </tags>
       
