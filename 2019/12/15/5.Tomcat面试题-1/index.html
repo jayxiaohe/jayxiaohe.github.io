@@ -8,22 +8,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>视频笔记之1-整合篇 - 一个博客</title>
+<title>Tomcat面试题-1 - 一个博客</title>
 
 
-    <meta name="description" content="整理中…">
-<meta name="keywords" content="Spring Boot">
+    <meta name="description" content="Tomcat面试题整理-1">
+<meta name="keywords" content="面试,Tomcat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="视频笔记之1-整合篇">
-<meta property="og:url" content="http://yoursite.com/2019/07/12/Spring-缓存/index.html">
+<meta property="og:title" content="Tomcat面试题-1">
+<meta property="og:url" content="http://yoursite.com/2019/12/15/5.Tomcat面试题-1/index.html">
 <meta property="og:site_name" content="一个博客">
-<meta property="og:description" content="整理中…">
+<meta property="og:description" content="Tomcat面试题整理-1">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-14T09:10:19.031Z">
+<meta property="og:updated_time" content="2019-12-15T12:05:44.390Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="视频笔记之1-整合篇">
-<meta name="twitter:description" content="整理中…">
+<meta name="twitter:title" content="Tomcat面试题-1">
+<meta name="twitter:description" content="Tomcat面试题整理-1">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -76,7 +76,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/THTHTH.ico" alt="视频笔记之1-整合篇" height="28">
+                <img src="/images/THTHTH.ico" alt="Tomcat面试题-1" height="28">
             
             </a>
         </div>
@@ -109,6 +109,10 @@
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -131,28 +135,28 @@
     <div class="card-content article ">
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal ">
             
-                <!-- <i class="fas fa-angle-double-right"></i>视频笔记之1-整合篇 -->
-                视频笔记之1-整合篇
+                <!-- <i class="fas fa-angle-double-right"></i>Tomcat面试题-1 -->
+                Tomcat面试题-1
             
         </h1>
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <!-- <time class="level-item has-text-grey" datetime="2019-07-12T15:00:26.000Z">2019-07-12</time> -->
-                <time class="level-item has-text-grey" datetime="2019-07-12T15:00:26.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-07-12</time>
+                <!-- <time class="level-item has-text-grey" datetime="2019-12-15T11:34:44.273Z">2019-12-15</time> -->
+                <time class="level-item has-text-grey" datetime="2019-12-15T11:34:44.273Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-12-15</time>
                 
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-07-14T09:10:19.031Z"><i class="far fa-calendar-check">&nbsp;</i>2019-07-14</time>
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-12-15T12:05:44.390Z"><i class="far fa-calendar-check">&nbsp;</i>2019-12-15</time>
                 
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/面试/">面试</a>
+                <a class="has-link-grey -link" href="/categories/Tomcat/">Tomcat</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 119 个字)
+                    7 分钟 读完 (大约 1024 个字)
                 </span>
                 
                 
@@ -166,27 +170,24 @@
         
         <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                视频笔记之1-整合篇
+                Tomcat面试题-1
             
         </h1> -->
         <div class="content">
             <blockquote>
-<p>整理中…</p>
+<p>Tomcat面试题整理-1</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="1-整合"><a href="#1-整合" class="headerlink" title="1.整合"></a>1.整合</h1><h2 id="1-整合mybatis。"><a href="#1-整合mybatis。" class="headerlink" title="1.整合mybatis。"></a>1.整合mybatis。</h2><ul>
-<li>配置文件中配置数据源：spring.datasource.url、username/password。</li>
-<li>启动类设置@MapperScan(“mapper包全限定名”)</li>
-<li>mapper包下的接口加@Mapper。</li>
-<li>注解形式：在mapper包下的接口中写@Insert @Select…等，注解参数写sql语句</li>
-<li>xml形式。待补充。</li>
-</ul>
-<h2 id="2-整合redis"><a href="#2-整合redis" class="headerlink" title="2.整合redis"></a>2.整合redis</h2><ul>
-<li>添加依赖 redis starter</li>
-<li>配置文件中配置：spring.redis.host=IP</li>
-<li>在service等处注入 RedisTemplate、StringRedisTemplate。</li>
-<li>若要存对象</li>
-</ul>
+
+<h1 id="解释什么是Jasper"><a href="#解释什么是Jasper" class="headerlink" title="解释什么是Jasper?"></a>解释什么是Jasper?</h1><p>　　Jasper是Tomcat的JSP引擎，它解析JSP文件，将它们编译成JAVA代码作为servlet。在运行时，Jasper允许自动检测JSP文件的更改并重新编译它们</p>
+<h1 id="请解释Tomcat的默认端口是什么"><a href="#请解释Tomcat的默认端口是什么" class="headerlink" title="请解释Tomcat的默认端口是什么?"></a>请解释Tomcat的默认端口是什么?</h1><p>　　Tomcat的默认启动端口是8080，关闭端口是8005。</p>
+<h1 id="请解释Tomcat中使用的连接器是什么"><a href="#请解释Tomcat中使用的连接器是什么" class="headerlink" title="请解释Tomcat中使用的连接器是什么?"></a>请解释Tomcat中使用的连接器是什么?</h1><p>　　在Tomcat中，使用了两种类型的连接器：<br>　　* HTTP连接器:它有许多可以更改的属性，以确定它的工作方式和访问功能，如重定向和代理转发<br>　　* AJP连接器:它以与HTTP连接器相同的方式工作，但是他们使用的是HTTP的AJP协议。AJP连接器通常通过插件技术mod_jk在Tomcat中实现</p>
+<h1 id="请阐述Catalina的配置文件有哪些"><a href="#请阐述Catalina的配置文件有哪些" class="headerlink" title="请阐述Catalina的配置文件有哪些?"></a>请阐述Catalina的配置文件有哪些?</h1><p>　　Catalina包含的配置文件有：<br>　　·policy<br>　　·properties<br>　　·properties<br>　　·xml<br>　　·Tomcat-users.xml</p>
+<h1 id="请解释将Tomcat作为一个Windows-服务运行会带来哪些好处"><a href="#请解释将Tomcat作为一个Windows-服务运行会带来哪些好处" class="headerlink" title="请解释将Tomcat作为一个Windows 服务运行会带来哪些好处?"></a>请解释将Tomcat作为一个Windows 服务运行会带来哪些好处?</h1><p>　　运行Tomcat作为windows服务带来了以下的好处：<br>　　* 自动启动:对于需要在维护后远程重新启动系统的环境来说，这是至关重要的<br>　　* 启动无活动用户登录的服务器:Tomcat通常在刀片服务器上运行，这些服务器甚至可能没有一个活动监视器，Windows服务可以在没有活动用户的情况下启动<br>　　* 安全性:在Windows服务下的Tomcat可以让您在一个特殊的系统帐户下运行它，这个账户可以从其他用户帐户中得到保护</p>
+<h1 id="解释如何使用WAR文件部署web应用程序"><a href="#解释如何使用WAR文件部署web应用程序" class="headerlink" title="解释如何使用WAR文件部署web应用程序?"></a>解释如何使用WAR文件部署web应用程序?</h1><p>　　在Tomcat的web应用程序目录下，jsp、servlet和它们的支持文件被放置在适当的子目录中。你可以将web应用程序目录下的所有文件压缩到一个压缩文件中，以.war文件扩展名结束。你可以通过在webapps目录中放置WAR文件来执行web应用程序。当一个web服务器开始执行时，它会将WAR文件的内容提取到适当的webapps子目录中。</p>
+<h1 id="解释什么是Tomcat-Valve"><a href="#解释什么是Tomcat-Valve" class="headerlink" title="解释什么是Tomcat Valve?"></a>解释什么是Tomcat Valve?</h1><pre><code>Tomcat Valve——Tomcat 4引入的新技术，它允许您将Java类的实例链接到一个特定的Catalina容器。</code></pre><h1 id="说明Tomcat配置了多少个Valve"><a href="#说明Tomcat配置了多少个Valve" class="headerlink" title="说明Tomcat配置了多少个Valve?"></a>说明Tomcat配置了多少个Valve?</h1><p>　　Tomcat配置了四种类型的Valve：<br>　　* 访问日志<br>　　* 远程地址过滤<br>　　* 远程主机过滤器<br>　　* 客户请求记录器</p>
+<h1 id="解释servlet如何完成生命周期"><a href="#解释servlet如何完成生命周期" class="headerlink" title="解释servlet如何完成生命周期?"></a>解释servlet如何完成生命周期?</h1><p>　　在Tomcat上运行的典型servlet生命周期如下：<br>　　* Tomcat通过它的其中一个连接器接收来自客户端的请求<br>　　* 进程请求Tomcat将此请求映射为适当的<br>　　* 一旦请求被定向到适当的servlet，Tomcat就会验证servlet类是否已经加载。如果不是Tomcat将servlet包装成Java字节码，这是由JVM执行的，并形成servlet的实例<br>　　* Tomcat通过调用它的init来启动servlet，它包含能够筛选Tomcat配置文件并相应地采取行动的代码，并声明它可能需要的任何资源<br>　　* 一旦servlet启动，Tomcat就可以调用servlet的服务方法来进行请求<br>　　* 在servlet的生命周期中，Tomcat和servlet可以通过使用侦听器类来进行协调或通信，从而跟踪各种状态变化的servlet<br>　　* 删除servlet，Tomcat调用servlet销毁方法</p>
+<h1 id="请解释什么是Tomcat-Coyote"><a href="#请解释什么是Tomcat-Coyote" class="headerlink" title="请解释什么是Tomcat Coyote ?"></a>请解释什么是Tomcat Coyote ?</h1><p>　　Tomcat coyote是基于HTTP / 1.1规范的HTTP连接器，通过监听TCP / IP端口并将请求发送回请求客户端，向Tomcat引擎接收和传输web请求。</p>
 
         </div>
         
@@ -196,7 +197,7 @@
                 <div class="level-item">
                     <!-- <span class="is-size-6 has-text-grey has-mr-7">#</span> -->
                     <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/tags/Spring-Boot/">Spring Boot</a>
+                    <a class="has-link-grey -link" href="/tags/Tomcat/">Tomcat</a>,&nbsp;<a class="has-link-grey -link" href="/tags/面试/">面试</a>
                 </div>
             </div>
         </div>
@@ -242,17 +243,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/07/13/Spring-Boot与消息/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Spring Boot与消息</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/12/3-一些面试题资源/">
-                <span class="level-item">一些面试题资源</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/14/4-面试题记录/">
+                <span class="level-item">面试题记录</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -273,7 +267,7 @@
     var gitalk = new Gitalk({
         clientID: '18567ce7f8569a99c932',
         clientSecret: '6288863c10c30604946b483cdd227429a02e5576',
-        id: '4b094eeddb2e268d06bacee4ac7774ca',
+        id: 'e1df66b3af3cf8850efbf3eda5f39e41',
         repo: 'jayxiaohe.github.io',
         owner: 'jayxiaohe',
         admin: "jayxiaohe",
@@ -295,6 +289,57 @@
 <div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#解释什么是Jasper">
+        <span class="has-mr-6">1</span>
+        <span>解释什么是Jasper?</span>
+        </a></li><li>
+        <a class="is-flex" href="#请解释Tomcat的默认端口是什么">
+        <span class="has-mr-6">2</span>
+        <span>请解释Tomcat的默认端口是什么?</span>
+        </a></li><li>
+        <a class="is-flex" href="#请解释Tomcat中使用的连接器是什么">
+        <span class="has-mr-6">3</span>
+        <span>请解释Tomcat中使用的连接器是什么?</span>
+        </a></li><li>
+        <a class="is-flex" href="#请阐述Catalina的配置文件有哪些">
+        <span class="has-mr-6">4</span>
+        <span>请阐述Catalina的配置文件有哪些?</span>
+        </a></li><li>
+        <a class="is-flex" href="#请解释将Tomcat作为一个Windows-服务运行会带来哪些好处">
+        <span class="has-mr-6">5</span>
+        <span>请解释将Tomcat作为一个Windows 服务运行会带来哪些好处?</span>
+        </a></li><li>
+        <a class="is-flex" href="#解释如何使用WAR文件部署web应用程序">
+        <span class="has-mr-6">6</span>
+        <span>解释如何使用WAR文件部署web应用程序?</span>
+        </a></li><li>
+        <a class="is-flex" href="#解释什么是Tomcat-Valve">
+        <span class="has-mr-6">7</span>
+        <span>解释什么是Tomcat Valve?</span>
+        </a></li><li>
+        <a class="is-flex" href="#说明Tomcat配置了多少个Valve">
+        <span class="has-mr-6">8</span>
+        <span>说明Tomcat配置了多少个Valve?</span>
+        </a></li><li>
+        <a class="is-flex" href="#解释servlet如何完成生命周期">
+        <span class="has-mr-6">9</span>
+        <span>解释servlet如何完成生命周期?</span>
+        </a></li><li>
+        <a class="is-flex" href="#请解释什么是Tomcat-Coyote">
+        <span class="has-mr-6">10</span>
+        <span>请解释什么是Tomcat Coyote ?</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
     
         <div class="column-right-shadow is-hidden-widescreen is-sticky">
@@ -316,7 +361,7 @@
             <div class="level-start has-text-centered-mobile">
                 <!-- <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/THTHTH.ico" alt="视频笔记之1-整合篇" height="28">
+                    <img src="/images/THTHTH.ico" alt="Tomcat面试题-1" height="28">
                 
                 </a> -->
                 <p>

@@ -41,17 +41,10 @@
 
     
     
-<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
-
     
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
-
     
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
-
     
     
     
@@ -74,15 +67,8 @@
 
 <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="is-2-column">
-    <!-- 雪花特效 -->
-    <script type="text/javascript">
-      var windowWidth = $(window).width();
-      if (windowWidth > 480) {
-        document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
-      }
-    </script>
-
+<!-- <body class="is-2-column"> -->
+<body class="is-3-column">
     <nav class="navbar navbar-main">
     <div class="container">
         <div class="navbar-brand is-flex-center">
@@ -131,10 +117,13 @@
     </div>
 </nav>
     
+    
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+                <!-- �˴�Ӳ���룬���ж��Ƿ���Ҫȫ�������˽� hexo ���ƣ�����Ϥejsģ�壬�����л����Ż��� -->
+                
+                    <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
@@ -149,62 +138,70 @@
 <div class="card">
     
     <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal ">
+            
+                <a class="has-link-black-ter" href="/2019/12/15/5.Tomcat面试题-1/">
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    Tomcat面试题-1
+                </a>
+            
+        </h1>
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-20T01:46:52.000Z">2019-07-20</time>
+                <!-- <time class="level-item has-text-grey" datetime="2019-12-15T11:34:44.273Z">2019-12-15</time> -->
+                <time class="level-item has-text-grey" datetime="2019-12-15T11:34:44.273Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-12-15</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-12-15T12:05:44.390Z"><i class="far fa-calendar-check">&nbsp;</i>2019-12-15</time>
+                
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/算法/">算法</a>
+                <a class="has-link-grey -link" href="/categories/Tomcat/">Tomcat</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 868 个字)
+                    7 分钟 读完 (大约 1024 个字)
                 </span>
                 
                 
             </div>
         </div>
         
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/07/20/算法-排序/">算法整理——排序</a>
+                <a class="has-link-black-ter" href="/2019/12/15/5.Tomcat面试题-1/">Tomcat面试题-1</a>
             
-        </h1>
+        </h1> -->
         <div class="content">
-            <!-- 
-链接样式
-<a href="https://github.com/Snailclimb/JavaGuide/blob/master/docs/database/Redis/Redis.md" class="LinkCard">Redis</a>
--->
-<h1 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1.冒泡排序"></a>1.冒泡排序</h1><h2 id="1-1-算法步骤"><a href="#1-1-算法步骤" class="headerlink" title="1.1 算法步骤"></a>1.1 算法步骤</h2><ul>
-<li>比较相邻的元素。如果第一个比第二个大，就交换他们两个。</li>
-<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的数。</li>
-<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
-<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
-</ul>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/D67peceibeISwc3aGibUlvZ0XqVnbWtBRiaC1S2jpXRzXcZVn0aP6BYnkO2FJicNstxicHmf9wMIic5FV0I75ptv5jYA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt="冒泡算法动图"></p>
-<h2 id="1-2-代码实现"><a href="#1-2-代码实现" class="headerlink" title="1.2 代码实现"></a>1.2 代码实现</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] sort(<span class="hljs-keyword">int</span>[] sourceArray) <span class="hljs-keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="hljs-keyword">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line">    <span class="hljs-comment">// 每次都把筛选出来的值放到最后面。</span></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i&lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">boolean</span> flag = <span class="hljs-keyword">true</span>;</span><br><span class="line">        <span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">         * 内层for结束后，最大值被放到了arr.length-1处，也就是最后面。</span></span><br><span class="line"><span class="hljs-comment">         * 下一轮，最大值被放到了arr.length-2处..</span></span><br><span class="line"><span class="hljs-comment">         * 最后一轮，最大值放到了0，也就是数组首位。</span></span><br><span class="line"><span class="hljs-comment">         * 当然，若在这个过程中的某一轮发现没有交换过元素，说明剩下的部分已经有序了。可以直接跳出循环。 </span></span><br><span class="line"><span class="hljs-comment">         * 注意此处的临界值！</span></span><br><span class="line"><span class="hljs-comment">         */</span></span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j&lt; arr.length -i -<span class="hljs-number">1</span>; j++) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (arr[j]&gt; arr[j+<span class="hljs-number">1</span>]) &#123;</span><br><span class="line">                <span class="hljs-keyword">int</span> temp = arr[j];</span><br><span class="line">                arr[j] = arr[j+<span class="hljs-number">1</span>];</span><br><span class="line">                arr[j+<span class="hljs-number">1</span>] = temp;</span><br><span class="line">                flag = <span class="hljs-keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">if</span> (flag) &#123;</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2.选择排序"></a>2.选择排序</h1><h2 id="2-1-算法步骤"><a href="#2-1-算法步骤" class="headerlink" title="2.1 算法步骤"></a>2.1 算法步骤</h2><ul>
-<li>首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置</li>
-<li>再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。</li>
-<li>重复第二步，直到所有元素均排序完毕。</li>
-</ul>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/D67peceibeISwc3aGibUlvZ0XqVnbWtBRiaB2dW1vA5SganRPChytYTFiaJL2PkXlL7XmhYmqIAzBHj0VvgJZs0vmA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt="选择排序算法动图"></p>
-<h2 id="2-2-代码实现"><a href="#2-2-代码实现" class="headerlink" title="2.2 代码实现"></a>2.2 代码实现</h2><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] sort(<span class="hljs-keyword">int</span>[] sourceArray) <span class="hljs-keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="hljs-keyword">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">         * 每次循环，先认为当前第一个元素最小（min表示最小值的下标）。再考察下一个元素到最后一个元素之间</span></span><br><span class="line"><span class="hljs-comment">         * 的最小值。每次有新的最小值，都会做一个交换，把新的最小值换到min处。确保每次内层循环结束后，arr[min]</span></span><br><span class="line"><span class="hljs-comment">         * 的值最小。即：每轮都把最小值放到最前面。下次外层循环，从下一个数开始，如此反复循环。</span></span><br><span class="line"><span class="hljs-comment">         */</span></span><br><span class="line">        <span class="hljs-keyword">int</span> min = i;</span><br><span class="line">        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (arr[min] &gt; arr[j]) &#123;</span><br><span class="line">                <span class="hljs-keyword">int</span> temp = arr[min];</span><br><span class="line">                arr[min] = arr[j];</span><br><span class="line">                arr[j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="3-插入排序"><a href="#3-插入排序" class="headerlink" title="3.插入排序"></a>3.插入排序</h1><h2 id="3-1-算法步骤"><a href="#3-1-算法步骤" class="headerlink" title="3.1 算法步骤"></a>3.1 算法步骤</h2><ul>
-<li>将第一待排序序列第一个元素看做一个有序序列，把第二个元素到最后一个元素当成是未排序序列。</li>
-<li>从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。（如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面。）</li>
-</ul>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/D67peceibeISwc3aGibUlvZ0XqVnbWtBRiaiatKZU4exjwcluduiclJOdZB0oZQicCrpIEaSJJg8iaia58viauSK3nhofqA/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt="插入排序算法动图"></p>
-<h2 id="3-2-代码实现"><a href="#3-2-代码实现" class="headerlink" title="3.2 代码实现"></a>3.2 代码实现</h2><p>放上参考链接。感谢作者。<br><a href="https://mp.weixin.qq.com/s/vn3KiV-ez79FmbZ36SX9lg" class="LinkCard" target="_blank" rel="noopener">十大经典排序算法</a></p>
-
+            <blockquote>
+<p>Tomcat面试题整理-1</p>
+</blockquote>
         </div>
         
+        
+        <!-- <div class="level is-mobile"> -->
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/Tomcat/">Tomcat</a>,&nbsp;<a class="has-link-grey -link" href="/tags/面试/">面试</a>
+                </div>
+                
+            </div>
+            <div class="level-start">
+                <div class="level-item">
+                    <a class="button is-size-7 is-light" href="/2019/12/15/5.Tomcat面试题-1/#more">
+                        <i class="fas fa-book-reader has-text-grey"></i>
+                        &nbsp;&nbsp;阅读更多
+                    </a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -217,14 +214,27 @@
 
 
 
+
     
 <div class="card">
     
     <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal ">
+            
+                <a class="has-link-black-ter" href="/2019/07/12/3-一些面试题资源/">
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    一些面试题资源
+                </a>
+            
+        </h1>
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-12T09:54:09.000Z">2019-07-12</time>
+                <!-- <time class="level-item has-text-grey" datetime="2019-07-12T09:54:09.000Z">2019-07-12</time> -->
+                <time class="level-item has-text-grey" datetime="2019-07-12T09:54:09.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-07-12</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-07-14T15:03:26.637Z"><i class="far fa-calendar-check">&nbsp;</i>2019-07-14</time>
+                
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/面试/">面试</a>
@@ -241,11 +251,11 @@
             </div>
         </div>
         
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
                 <a class="has-link-black-ter" href="/2019/07/12/3-一些面试题资源/">一些面试题资源</a>
             
-        </h1>
+        </h1> -->
         <div class="content">
             <blockquote>
 <p>面试资源整理</p>
@@ -253,10 +263,23 @@
         </div>
         
         
-        <div class="level is-mobile">
+        <!-- <div class="level is-mobile"> -->
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/面试/">面试</a>
+                </div>
+                
+            </div>
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/07/12/3-一些面试题资源/#more">阅读更多</a>
+                    <a class="button is-size-7 is-light" href="/2019/07/12/3-一些面试题资源/#more">
+                        <i class="fas fa-book-reader has-text-grey"></i>
+                        &nbsp;&nbsp;阅读更多
+                    </a>
                 </div>
             </div>
         </div>
@@ -272,14 +295,27 @@
 
 
 
+
     
 <div class="card">
     
     <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal ">
+            
+                <a class="has-link-black-ter" href="/2019/07/12/SQL-调优相关/">
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    SQL 调优相关
+                </a>
+            
+        </h1>
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-12T08:31:10.000Z">2019-07-12</time>
+                <!-- <time class="level-item has-text-grey" datetime="2019-07-12T08:31:10.000Z">2019-07-12</time> -->
+                <time class="level-item has-text-grey" datetime="2019-07-12T08:31:10.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-07-12</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-07-12T09:35:27.397Z"><i class="far fa-calendar-check">&nbsp;</i>2019-07-12</time>
+                
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/SQL/">SQL</a>
@@ -296,11 +332,11 @@
             </div>
         </div>
         
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
                 <a class="has-link-black-ter" href="/2019/07/12/SQL-调优相关/">SQL 调优相关</a>
             
-        </h1>
+        </h1> -->
         <div class="content">
             <blockquote>
 <p>记录SQL调优相关内容</p>
@@ -308,10 +344,23 @@
         </div>
         
         
-        <div class="level is-mobile">
+        <!-- <div class="level is-mobile"> -->
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/sql/">sql</a>,&nbsp;<a class="has-link-grey -link" href="/tags/面试/">面试</a>
+                </div>
+                
+            </div>
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/07/12/SQL-调优相关/#more">阅读更多</a>
+                    <a class="button is-size-7 is-light" href="/2019/07/12/SQL-调优相关/#more">
+                        <i class="fas fa-book-reader has-text-grey"></i>
+                        &nbsp;&nbsp;阅读更多
+                    </a>
                 </div>
             </div>
         </div>
@@ -327,14 +376,27 @@
 
 
 
+
     
 <div class="card">
     
     <div class="card-content article ">
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal ">
+            
+                <a class="has-link-black-ter" href="/2019/07/11/2.Spring MVC原理/">
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    Spring MVC 工作原理
+                </a>
+            
+        </h1>
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-11T01:45:56.700Z">2019-07-11</time>
+                <!-- <time class="level-item has-text-grey" datetime="2019-07-11T01:45:56.700Z">2019-07-11</time> -->
+                <time class="level-item has-text-grey" datetime="2019-07-11T01:45:56.700Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-07-11</time>
+                
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2019-07-18T02:34:32.033Z"><i class="far fa-calendar-check">&nbsp;</i>2019-07-18</time>
+                
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Spring-MVC/">Spring MVC</a>
@@ -351,11 +413,11 @@
             </div>
         </div>
         
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
                 <a class="has-link-black-ter" href="/2019/07/11/2.Spring MVC原理/">Spring MVC 工作原理</a>
             
-        </h1>
+        </h1> -->
         <div class="content">
             <blockquote>
 <p>Spring MVC 原理（整理自网络）</p>
@@ -363,10 +425,23 @@
         </div>
         
         
-        <div class="level is-mobile">
+        <!-- <div class="level is-mobile"> -->
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-mobile is-flex">
+            <div class="level-start">
+                
+                <div class="level-item is-size-7 is-uppercase">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/Spring/">Spring</a>,&nbsp;<a class="has-link-grey -link" href="/tags/Spring-MVC/">Spring MVC</a>,&nbsp;<a class="has-link-grey -link" href="/tags/面试/">面试</a>
+                </div>
+                
+            </div>
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/07/11/2.Spring MVC原理/#more">阅读更多</a>
+                    <a class="button is-size-7 is-light" href="/2019/07/11/2.Spring MVC原理/#more">
+                        <i class="fas fa-book-reader has-text-grey"></i>
+                        &nbsp;&nbsp;阅读更多
+                    </a>
                 </div>
             </div>
         </div>
@@ -382,15 +457,14 @@
 
 
 
+
 </div>
-                
+                    
 
 
 
 
-<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left is-sticky">
-    
-        
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -413,7 +487,7 @@
                     </p>
                     
                     
-                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey" style="margin-top: 10px;">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
                         <span>陕西 - 西安</span>
                     </p>
@@ -421,42 +495,36 @@
                 </div>
             </div>
         </nav>
-        <nav class="level is-mobile">
+        <nav class="profile-wrap level is-mobile">
             <div class="level-item has-text-centered is-marginless">
-                <div>
+                <a href="/archives">
                     <p class="heading">
                         文章
                     </p>
-                    <a href="/archives">
-                        <p class="title has-text-weight-normal">
-                            9
-                        </p>
-                    </a>
-                </div>
+                    <p class="title has-text-weight-normal">
+                        9
+                    </p>
+                </a>
             </div>
             <div class="level-item has-text-centered is-marginless">
-                <div>
+                <a href="/categories">
                     <p class="heading">
                         分类
                     </p>
-                    <a href="/categories">
-                        <p class="title has-text-weight-normal">
-                            7
-                        </p>
-                    </a>
-                </div>
+                    <p class="title has-text-weight-normal">
+                        7
+                    </p>
+                </a>
             </div>
             <div class="level-item has-text-centered is-marginless">
-                <div>
+                <a href="/tags">
                     <p class="heading">
                         标签
                     </p>
-                    <a href="/tags">
-                        <p class="title has-text-weight-normal">
-                            11
-                        </p>
-                    </a>
-                </div>
+                    <p class="title has-text-weight-normal">
+                        10
+                    </p>
+                </a>
             </div>
         </nav>
         
@@ -464,6 +532,9 @@
         
     </div>
 </div>
+
+    
+        
     
         
 <div class="card widget">
@@ -498,6 +569,14 @@
                 <span class="level-item tag">1</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/Tomcat/">
+            <span class="level-start">
+                <span class="level-item">Tomcat</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/resume/">
             <span class="level-start">
                 <span class="level-item">resume</span>
@@ -509,14 +588,6 @@
         <a class="level is-marginless" href="/categories/xxx/">
             <span class="level-start">
                 <span class="level-item">xxx</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/算法/">
-            <span class="level-start">
-                <span class="level-item">算法</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -579,6 +650,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Tomcat/">
+                        <span class="tag">Tomcat</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/resume/">
                         <span class="tag">resume</span>
                         <span class="tag is-grey">1</span>
@@ -600,20 +678,6 @@
                 </div>
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/排序/">
-                        <span class="tag">排序</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
-                    <a class="tags has-addons" href="/tags/算法/">
-                        <span class="tag">算法</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
                     <a class="tags has-addons" href="/tags/面试/">
                         <span class="tag">面试</span>
                         <span class="tag is-grey">4</span>
@@ -626,42 +690,99 @@
 </div>
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
         
         </div>
     
 </div>
 
+
+                    
+
                 
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" style="padding: 2rem">
     <div class="container">
         <div class="level">
             <div class="level-start has-text-centered-mobile">
-                <a class="footer-logo is-block has-mb-6" href="/">
+                <!-- <a class="footer-logo is-block has-mb-6" href="/">
                 
                     <img src="/images/THTHTH.ico" alt="一个博客" height="28">
                 
-                </a>
-                <p class="is-size-7">
-                &copy; 2019 HePengTao
-                
-                
-                <br>
-                <span id="busuanzi_container_site_uv">
-                共<span id="busuanzi_value_site_uv">0</span>个访客
-                </span>
-                
+                </a> -->
+                <p>
+                    
+                        <span id="busuanzi_container_site_uv">
+                        共<a class="pd-3" id="busuanzi_value_site_uv">0</a>个访客
+                        </span>
+                        <br>
+                    
+                    <div id="run-time">
+                        小站已运行<a class="pd-3 year"></a>年<a class="pd-3 day"></a>天<a class="pd-3 hour"></a>时<a class="pd-3 minute"></a>分<a class="pd-3 second"></a>秒
+                    </div>
+                    &copy; 
+                    2019 HePengTao
+                    <span class="with-love has-text-centered-mobile" id="animate">
+                        <i class="fa fa-heart"></i>
+                    </span>
                 </p>
             </div>
-            <div class="level-end">
+
+            <!-- <div class="level-end">
             
-            </div>
+            </div> -->
         </div>
     </div>
+    <script>
+        var runTime = {
+            year: document.querySelector('#run-time .year'),
+            day: document.querySelector('#run-time .day'),
+            hour: document.querySelector('#run-time .hour'),
+            minute: document.querySelector('#run-time .minute'),
+            second: document.querySelector('#run-time .second'),
+            start: new Date("2019/10/05 15:00:00"),
+            init: function() {
+                var me = this;
+                this.calcTime()
+                setInterval(function() {
+                    var obj = me.calcTime()
+                    me.renderPage(obj)
+                }, 1000)
+            },
+            renderPage: function(obj) {
+                this.year.innerText = obj.y;
+                this.day.innerText = obj.d;
+                this.hour.innerText = obj.h;
+                this.minute.innerText = obj.m;
+                this.second.innerText = obj.s;
+            },
+            calcTime: function() {
+                var cur = new Date()
+                var diff = (cur - this.start) / 1000
+
+                var y = parseInt(diff / (365*24*60*60))
+                var d = parseInt(diff / (24*60*60) % 365)
+                var h = parseInt(diff / (60 * 60) % 24);
+                var m = parseInt(diff / 60 % 60);
+                var s = parseInt(diff % 60);
+                return {
+                    y: this.addZero(y),
+                    d: this.addZero(d),
+                    h: this.addZero(h),
+                    m: this.addZero(m),
+                    s: this.addZero(s)
+                }
+            },
+            addZero: function(i) {
+                return i < 10 ? "0" + i: i + "";
+            },
+        }
+        runTime.init()
+    </script>
 </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
 <script>moment.locale("zh-CN");</script>
@@ -684,56 +805,12 @@ var IcarusThemeSettings = {
 
     
     
-<script src="/js/animation.js"></script>
-
     
     
-<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
-<script src="/js/gallery.js" defer></script>
-
     
     
-<div id="outdated">
-    <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
-            my browser now </a></p>
-    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        outdatedBrowser({
-            bgColor: '#f25648',
-            color: '#ffffff',
-            lowerThan: 'flex'
-        });
-    });
-</script>
-
     
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    MathJax.Hub.Config({
-        'HTML-CSS': {
-            matchFontHeight: false
-        },
-        SVG: {
-            matchFontHeight: false
-        },
-        CommonHTML: {
-            matchFontHeight: false
-        },
-        tex2jax: {
-            inlineMath: [
-                ['$','$'],
-                ['\\(','\\)']
-            ]
-        }
-    });
-});
-</script>
+    
     
     
 <a id="back-to-top" title="回到顶端" href="javascript:;">
@@ -787,6 +864,5 @@ document.addEventListener('DOMContentLoaded', function () {
 <link rel="stylesheet" href="/css/search.css">
 <link rel="stylesheet" href="/css/insight.css">
     
-	
 </body>
 </html>
