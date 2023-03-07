@@ -1,0 +1,1 @@
+import{ab as t,G as a,H as o,E as e,U as c}from"./framework-756f1659.js";const n={},r=e("h2",{id:"dubbo",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#dubbo","aria-hidden":"true"},"#"),c(" Dubbo")],-1),s=[r];function d(_,i){return a(),o("div",null,s)}const l=t(n,[["render",d],["__file","index.html.vue"]]);export{l as default};

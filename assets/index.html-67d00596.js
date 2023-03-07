@@ -1,0 +1,79 @@
+import{ab as o,G as l,H as c,E as s,U as n,N as a,ac as i,ad as u,X as p}from"./framework-756f1659.js";const r={},d=s("h2",{id:"🔗-链接",tabindex:"-1"},[s("a",{class:"header-anchor",href:"#🔗-链接","aria-hidden":"true"},"#"),n(" 🔗 链接")],-1),k={href:"https://leetcode-cn.com/problems/palindrome-linked-list/",target:"_blank",rel:"noopener noreferrer"},v={href:"https://leetcode-cn.com/problems/palindrome-linked-list-lcci/",target:"_blank",rel:"noopener noreferrer"},m=u(`<br><h2 id="📋-代码" tabindex="-1"><a class="header-anchor" href="#📋-代码" aria-hidden="true">#</a> 📋 代码</h2><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token doc-comment comment">/**
+ * Definition for singly-linked list.
+ * public class ListNode <span class="token punctuation">{</span>
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) <span class="token punctuation">{</span> val = x; <span class="token punctuation">}</span>
+ * <span class="token punctuation">}</span>
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ListNode</span> fast <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token class-name">ListNode</span> slow <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token class-name">ListNode</span> pre <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token class-name">ListNode</span> prepre <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>fast <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> fast<span class="token punctuation">.</span>next <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// pre在slow左侧。</span>
+            pre <span class="token operator">=</span> slow<span class="token punctuation">;</span>
+            <span class="token comment">// slow/fast分别代表慢/快指针。</span>
+            slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            fast <span class="token operator">=</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            <span class="token comment">// pre指向左边。</span>
+            pre<span class="token punctuation">.</span>next <span class="token operator">=</span> prepre<span class="token punctuation">;</span>
+            <span class="token comment">// prepre也跟着右移。</span>
+            prepre <span class="token operator">=</span> pre<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 调整slow的位置。</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>fast <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>pre <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> slow <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>pre<span class="token punctuation">.</span>val <span class="token operator">!=</span> slow<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            pre <span class="token operator">=</span> pre<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><br><h2 id="💡-思路" tabindex="-1"><a class="header-anchor" href="#💡-思路" aria-hidden="true">#</a> 💡 思路</h2><p>详见代码注释。其中，第一个while结束后，有两种情况：</p><ul><li>链表节点为奇数个。如下图。此时，fast指向最后一个节点，不为null。还需要调整slow的位置。把slow指向节点4。因为奇数个节点，中间的节点3不会影响回文属性，所以无需关注它，直接把slow移到节点4。 <img src="https://iyes.life/post-images/1582205737501.png" alt="奇数个节点的链表" loading="lazy"> 移动后，pre和slow分别指向2和4。如下图： <img src="https://iyes.life/post-images/1582205868614.png" alt="移动后" loading="lazy"></li><li>链表节点为偶数个。如下图。此时，fast指向null。无需调整slow的位置。 <img src="https://iyes.life/post-images/1582204878105.png" alt="偶数个节点的链表" loading="lazy"> 之后的while就简单了。依次比较pre和slow节点的值。如果不等，返回false；否则，移动pre和slow，直到全部比较完。返回true。</li></ul><br><h2 id="🎃-缺点" tabindex="-1"><a class="header-anchor" href="#🎃-缺点" aria-hidden="true">#</a> 🎃 缺点</h2><p>虽然题目没有明确要求不能改变链表，但一般来说仍应在返回结果之前恢复链表。 另附上官方题解</p><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>head <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token comment">// Find the end of first half and reverse second half.</span>
+        <span class="token class-name">ListNode</span> firstHalfEnd <span class="token operator">=</span> <span class="token function">endOfFirstHalf</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ListNode</span> secondHalfStart <span class="token operator">=</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>firstHalfEnd<span class="token punctuation">.</span>next<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Check whether or not there is a palindrome.</span>
+        <span class="token class-name">ListNode</span> p1 <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token class-name">ListNode</span> p2 <span class="token operator">=</span> secondHalfStart<span class="token punctuation">;</span>
+        <span class="token keyword">boolean</span> result <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>result <span class="token operator">&amp;&amp;</span> p2 <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>p1<span class="token punctuation">.</span>val <span class="token operator">!=</span> p2<span class="token punctuation">.</span>val<span class="token punctuation">)</span> result <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            p1 <span class="token operator">=</span> p1<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            p2 <span class="token operator">=</span> p2<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>        
+        <span class="token comment">// Restore the list and return the result.</span>
+        firstHalfEnd<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>secondHalfStart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">ListNode</span> <span class="token function">reverseList</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ListNode</span> prev <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">ListNode</span> curr <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>curr <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">ListNode</span> nextTemp <span class="token operator">=</span> curr<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            curr<span class="token punctuation">.</span>next <span class="token operator">=</span> prev<span class="token punctuation">;</span>
+            prev <span class="token operator">=</span> curr<span class="token punctuation">;</span>
+            curr <span class="token operator">=</span> nextTemp<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> prev<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">ListNode</span> <span class="token function">endOfFirstHalf</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ListNode</span> fast <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token class-name">ListNode</span> slow <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>fast<span class="token punctuation">.</span>next <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            fast <span class="token operator">=</span> fast<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            slow <span class="token operator">=</span> slow<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><br>`,12);function b(h,w){const e=p("ExternalLinkIcon"),t=p("center");return l(),c("div",null,[d,s("p",null,[s("a",k,[n("LeetCode-234"),a(e)]),n(" 该题和 "),s("a",v,[n("面试题 02.06"),a(e)]),n(" 一样")]),m,a(t,null,{default:i(()=>[n("End")]),_:1})])}const y=o(r,[["render",b],["__file","index.html.vue"]]);export{y as default};

@@ -1,0 +1,1 @@
+import{ab as t,G as a,H as s,E as e,U as c}from"./framework-756f1659.js";const n={},r=e("h2",{id:"mybatis",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#mybatis","aria-hidden":"true"},"#"),c(" MyBatis")],-1),o=[r];function i(d,_){return a(),s("div",null,o)}const l=t(n,[["render",i],["__file","index.html.vue"]]);export{l as default};

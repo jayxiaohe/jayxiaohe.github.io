@@ -1,0 +1,1 @@
+import{ab as t,G as a,H as r,E as e,U as c}from"./framework-756f1659.js";const n={},s=e("h2",{id:"rabbitmq",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#rabbitmq","aria-hidden":"true"},"#"),c(" RabbitMQ")],-1),o=[s];function i(d,_){return a(),r("div",null,o)}const l=t(n,[["render",i],["__file","index.html.vue"]]);export{l as default};
